@@ -398,8 +398,10 @@ Array.from(playSongs).forEach((e, i) => {
         event.target.classList.remove('bxs-caret-right-circle')
         event.target.classList.add('bx-stop-circle')
     })
+    
 
 })
+
 
 
 //time start && time end
@@ -502,6 +504,7 @@ backMusic.addEventListener('click',function(){
         let { songName, poster } = elss
         titleSong.innerHTML = songName
         posterPlay.src = poster
+        downloadMusic.setAttribute('download',songName) 
     })
 
     makeAllBackground()
@@ -532,11 +535,71 @@ nextMusic.addEventListener('click',function(){
         let { songName, poster } = elss
         titleSong.innerHTML = songName
         posterPlay.src = poster
+        downloadMusic.setAttribute('download',songName) 
     })
+
 
     makeAllBackground()
     Array.from(backgroundSong)[index - 1].style.background = 'rgb(105,105,170,.1)'
     makeAllPlay()
   
+})
+
+//auto play
+music.addEventListener('ended',()=>{
+    index++
+    if(index > Array.from(Songs).length){
+        // index = Array.from(Songs).length
+        index = 0
+        index++
+       
+    }
+    music.src = `./audio/${index}.mp3`
+    // posterPlay.src = `./image/${index}.jpg`
+    // titleSong.innerHTML = Songs[i].songName
+    playMusic.classList.add('bx-pause')
+    playMusic.classList.remove('bx-play')
+    showTextButtons.innerText = 'Đang Play...'
+    posterPlay.classList.add('active')
+    downloadMusic.href = `audio/${index}.mp3`
+    music.play()
+
+    let songTitles = Songs.filter((els) => {
+        return els.id == index
+
+    })
+
+    songTitles.forEach(elss => {
+        let { songName, poster } = elss
+        titleSong.innerHTML = songName
+        posterPlay.src = poster
+        downloadMusic.setAttribute('download',songName) 
+    })
+
+    makeAllBackground()
+    Array.from(backgroundSong)[index - 1].style.background = 'rgb(105,105,170,.1)'
+    makeAllPlay()
+    event.target.classList.remove('bxs-caret-right-circle')
+    event.target.classList.add('bx-stop-circle')
+})
+
+////shuffle button
+const shuffle = document.getElementById('shuffle')
+const popupShuffle = document.querySelector('.popup__shuffle')
+
+
+shuffle.addEventListener('click',poPupShuffle)
+
+function poPupShuffle(){
+    popupShuffle.classList.add('active')
+    playMusic.classList.add('bx-pause')
+    playMusic.classList.remove('bx-play')
+    posterPlay.classList.add('active')
+    showTextButtons.innerText = 'Đang Play...'
+    music.play() 
+}
+
+popupShuffle.addEventListener('click',()=>{
+    popupShuffle.classList.remove('active')
 })
 

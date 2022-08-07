@@ -324,6 +324,7 @@
             <div class="content">
                 <h1>Nhạc Remix - NCS</h1>
                 <p>Website được xây dựng với 3 ngôn ngữ html css javascript , remake trong 3 ngày ,chúc bạn nghe nhạc vui vẻ và thoải mái</p>
+                <p>Lưu ý: nhạc sẽ tự động phát khi bài hát kết thúc !</p>
                 <div class="buttons">
                     <button>PLAY</button>
                     <button>FOLLOW</button>
@@ -798,11 +799,12 @@
                     <div class="subtitle">Linas X</div>
                 </h5>
                 <div class="icons">
+                    <i class='bx bx-shuffle shuffle'  id="shuffle"></i>
                     <i class='bx bx-skip-previous' id="back"></i>
                     <!-- <i class='bx bx-stop'></i> -->
                     <i class='bx bx-play' id="playMusic"></i>
                     <i class='bx bx-skip-next' id="next"></i>
-                    <a href="" download id="download__Song"><i class='bx bx-download'></i></a>
+                    <a href="" download id="download__Song"><i class='bx bxs-download'></i></a>
                 </div>
                 <span id="currentStart">0:00</span>
                 <div class="bar">
@@ -819,7 +821,10 @@
                 </div>
         </div>
 
-        
+        <!--popup shuffle-->
+        <div class="popup__shuffle">
+            <h1>Đã bật auto play</h1>
+        </div>
 
     </header>
 
