@@ -122,13 +122,13 @@ header {
     padding: 1rem;
     margin-top: 3rem;
     overflow-y: auto;
-    height: 30%;
+    height: 20%;
 }
 
 .menu__songs-list {
     overflow-y: auto;
     height: 100%;
-    margin-bottom: 3rem;
+    
 }
 
 .menu__songs-list::-webkit-scrollbar {
@@ -774,6 +774,9 @@ header {
     }
     .menu-songs{
         height: 70%;
+    }
+    .menu-songs{
+        height: 50%;
     }
     
     
