@@ -95,7 +95,8 @@ let showMenu = document.querySelector('.menu-side')
 
 
 openMenu.addEventListener('click',function(){
-    showMenu.classList.toggle('active')
+    showMenu.classList.add('active')
+    showUser.classList.remove('active')
    
 })
 
@@ -493,6 +494,8 @@ backMusic.addEventListener('click',function(){
     // titleSong.innerHTML = Songs[i].songName
     playMusic.classList.add('bx-pause')
     playMusic.classList.remove('bx-play')
+    posterPlay.classList.add('active')
+    showTextButtons.innerText = 'Đang Play...'
     music.play()
 
     let songTitles = Songs.filter((els) => {
@@ -524,6 +527,8 @@ nextMusic.addEventListener('click',function(){
     // titleSong.innerHTML = Songs[i].songName
     playMusic.classList.add('bx-pause')
     playMusic.classList.remove('bx-play')
+    posterPlay.classList.add('active')
+     showTextButtons.innerText = 'Đang Play...'
     music.play()
 
     let songTitles = Songs.filter((els) => {
@@ -603,3 +608,70 @@ popupShuffle.addEventListener('click',()=>{
     popupShuffle.classList.remove('active')
 })
 
+//fullscreen
+
+let fullscreen;
+let fsEnter = document.getElementById('fullscr');
+let textFullScreen = document.querySelector('.innerFullScreen')
+fsEnter.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!fullscreen) {
+        fullscreen = true;
+        document.documentElement.requestFullscreen();
+        textFullScreen.innerText = "Exit";
+    }
+    else {
+        fullscreen = false;
+        document.exitFullscreen();
+        textFullScreen.innerText = "Full Screen";
+    }
+});
+
+//user 
+let openUser = document.querySelector('.image__setting')
+let showUser = document.querySelector('.user__setting')
+
+openUser.addEventListener('click',function(){
+    showUser.classList.toggle('active')
+})
+
+//search result
+let searchResult = document.getElementsByClassName('search_result')[0]
+
+Songs.forEach(element =>{
+    const {id,songName,poster} = element
+    let cardSearch = document.createElement('a')
+    cardSearch.href ="#" + id
+    cardSearch.classList.add('cart__search')
+    cardSearch.innerHTML = `
+    <img src="${poster}" alt="">
+    <div class="content__search">
+        <h1>${songName}</h1>
+    </div>
+    `
+    searchResult.appendChild(cardSearch)
+})
+
+let inputSeach = document.getElementsByClassName('input__seach-result')[0]
+inputSeach.addEventListener('keyup',()=>{
+    let inputSearchValue = inputSeach.value.toUpperCase().trim()
+    let itemsSearch = searchResult.getElementsByTagName('a')
+
+    for(let index = 0;index<itemsSearch.length;index++){
+        let elementItems = itemsSearch[index].getElementsByClassName('content__search')[0]
+        let textValue = elementItems.textContent || elementItems.innerHTML
+        if(textValue.toUpperCase().indexOf(inputSearchValue) > -1){
+            itemsSearch[index].style.display = 'flex'
+        }
+        else{
+            itemsSearch[index].style.display = 'none'
+        }
+        if(inputSeach.value ==0){
+            searchResult.style.display = 'none'
+        }
+        else{
+            searchResult.style.display = 'block'
+        }
+    }
+
+})

@@ -495,8 +495,59 @@ header {
     display: flex;
     color: white;
     margin-right: 1rem;
+    position: relative;
 }
-
+.search_result{
+    position: absolute;
+    width: 100%;
+    /* background: #111727; */
+    height: 200px;
+    top: 33px;
+    border-radius: 6px;
+    left: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+.search_result::-webkit-scrollbar{
+    display: none;
+}
+.cart__search{
+    width: 100%;
+    height: 25%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    margin-bottom: 7px;
+    display: none;
+}
+.cart__search img{
+    width: 35px;
+    height: 35px;
+    margin: 0 1rem;
+    border-radius: 6px;
+}
+.content__search{
+    width: 90%;
+}
+.content__search h1{
+    font-size: 1.7rem;
+    color: white;
+    text-transform: capitalize;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 1px solid white;
+}
+.content__search .sub__author{
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .search input {
     background: none;
     color: white;
@@ -542,6 +593,7 @@ header {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem 0;
+    text-align: j;
 }
 
 .buttons {
@@ -562,17 +614,20 @@ header {
 .buttons button:nth-child(2):hover {
     background: none;
     color: #36e2ec;
+    
 }
 
 .buttons button:nth-child(1) {
     background: #5ade;
     border: 2px solid #36e2ec;
+    box-shadow: 0 0 5px #1cdbe9, 0 0 5px #1da4da inset;
 }
 
 .buttons button:nth-child(2) {
     background: rgba(247, 244, 63, 0.933);
     color: black;
-    border: 2px solid #aac70a;
+    border: 2px solid #ece250;
+    box-shadow: 0 0 5px #eedc3d, 0 0 5px #e7d63b inset;
 }
 
 .popular__song {
@@ -745,26 +800,79 @@ header {
 }
 .popup__shuffle{
     position: fixed;
-    width: 50%;
+    width: 100px;
     right: -50%;
     top: 75%;
-    background: lawngreen;
+    background: #111727;
     text-align: center;
     align-items: center;
     z-index: 20;
     padding: 1rem 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: rgb(236, 235, 234);
 }
 .popup__shuffle.active{
     right: 0%;
 }
-
-
-
-
-
-
+.user{
+    position: relative;
+}
+.user__setting{
+    position:absolute;
+    color: white;
+    background: rgb(90, 88, 88);
+    right: -2rem;
+    border-radius: 6px;
+    margin-top: .7rem;
+    width: 170px;
+    z-index: 5;
+    display: none;
+     box-shadow: 0 0 5px #666464, 0 0 5px #5a5959 inset;
+}
+.user__setting.active{
+    display: block;
+}
+.user__setting::before{
+    content: '';
+    background: rgb(90, 88, 88);
+    position: absolute;
+    top: -.7rem;
+    width: 15px;
+    height: 15px;
+    right: 3rem;
+    clip-path: polygon(50% 0%, 100% 50%, 49% 50%, 0% 50%);
+}
+.user__setting-music{
+    display: flex;
+    margin: 1rem;
+    padding: .7rem 2rem;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+.user__setting-music:hover{
+    background: lightskyblue;
+    color: black;
+}
+.user__setting-music i{
+    margin-right: 1.2rem;
+    font-size: 2.5rem;
+}
+.user__setting-music h1{
+    font-size: 1.3rem;
+}
+.bxs-user-detail{
+    color: rgb(235, 57, 196);
+}
+.bxs-user{
+    color: greenyellow;
+}
+.bx-fullscreen{
+    color:yellow;
+}
 
 
 
@@ -854,7 +962,7 @@ header {
 
 
 
-@media (max-width:450px) {
+@media (max-width:480px) {
     html {
         font-size: 50%;
     }
@@ -920,5 +1028,8 @@ header {
     }
     .menu-songs{
         margin-top: 1rem;
+    }
+    .user__setting{
+        width: 138px;
     }
 }
