@@ -365,6 +365,27 @@ header {
     left: -6px;
     box-shadow: inset 0px 0px 3px #36e2ec;
 }
+.dot1 {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #36e2ec;
+    border-radius: 50%;
+    right: 0;
+    top: -1px;
+}
+
+.dot1::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #36e2ec;
+    border-radius: 50%;
+    top: -6px;
+    left: -6px;
+    box-shadow: inset 0px 0px 3px #36e2ec;
+}
 
 .bar input {
     position: absolute;
