@@ -43,6 +43,19 @@ buttonAllow.addEventListener('click',()=>{
         })       
 })
 
+//music vietnam button
+const buttonsLeft = document.querySelector('#music_button-left')
+const buttonsRight = document.querySelector('#music_button-right')
+const boxSong = document.getElementsByClassName('pop__song-music')[0]
+
+buttonsLeft.addEventListener('click',function(){
+    boxSong.scrollLeft -= 330
+})
+buttonsRight.addEventListener('click',function(){
+    boxSong.scrollLeft += 330
+})
+
+
 // buttonAllow.addEventListener('click',()=>{
 //     showTextButtons.innerText = 'Đang Play...'
 //     ClickPauseSong()
@@ -286,7 +299,7 @@ const Songs = [
         id: 27,
         songName: `phai dấu cuộc tình<br>
         <div class="sub__author">Phạm Kỳ Anh</div>`,
-        poster: './image/26.jpg',
+        poster: './image/27.jpg',
     },
     
 ]
@@ -499,8 +512,8 @@ backMusic.addEventListener('click',function(){
 
 nextMusic.addEventListener('click',function(){
     index++
-    if(index > Array.from(backgroundSong).length){
-        index = Array.from(backgroundSong).length
+    if(index > Array.from(Songs).length){
+        index = Array.from(Songs).length
         alert('bài cuối r đó,đừng ấn qua bài tiếp theo nữa')
     }
     music.src = `./audio/${index}.mp3`
