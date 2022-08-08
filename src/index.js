@@ -641,7 +641,7 @@ let searchResult = document.getElementsByClassName('search_result')[0]
 Songs.forEach(element =>{
     const {id,songName,poster} = element
     let cardSearch = document.createElement('a')
-    cardSearch.href ="#" + id
+    // cardSearch.href ="#" + id
     cardSearch.classList.add('cart__search')
     cardSearch.innerHTML = `
     <img src="${poster}" alt="">

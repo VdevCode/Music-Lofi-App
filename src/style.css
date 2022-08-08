@@ -150,6 +150,7 @@ header {
     padding: 0 1rem;
     cursor: pointer;
     background: rgb(105, 105, 170, .0);
+    text-transform: capitalize;
 }
 
 /* .song__item:hover{
@@ -519,7 +520,7 @@ header {
     border-radius: 6px;
     display: flex;
     align-items: center;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.7);
     margin-bottom: 7px;
     display: none;
 }
@@ -823,12 +824,12 @@ header {
 .user__setting{
     position:absolute;
     color: white;
-    background: rgb(90, 88, 88);
+    background: rgb(24, 23, 23);
     right: -2rem;
     border-radius: 6px;
     margin-top: .7rem;
     width: 170px;
-    z-index: 5;
+    z-index: 11;
     display: none;
      box-shadow: 0 0 5px #666464, 0 0 5px #5a5959 inset;
 }
@@ -837,18 +838,19 @@ header {
 }
 .user__setting::before{
     content: '';
-    background: rgb(90, 88, 88);
+    background: rgb(24, 23, 23);
     position: absolute;
     top: -.7rem;
     width: 15px;
     height: 15px;
-    right: 3rem;
+    right: 2.7rem;
+     box-shadow: 0 0 5px #666464, 0 0 5px #5a5959 inset;
     clip-path: polygon(50% 0%, 100% 50%, 49% 50%, 0% 50%);
 }
 .user__setting-music{
     display: flex;
     margin: 1rem;
-    padding: .7rem 2rem;
+    padding: .7rem 1rem;
     align-items: center;
     cursor: pointer;
     transition: .2s;
@@ -873,6 +875,93 @@ header {
 .bx-fullscreen{
     color:yellow;
 }
+.form__login{
+    width: 40%;
+
+    margin: auto;
+}
+.form__content{
+    width: 80%;
+    height: auto;
+    margin: auto;
+     background: rgb(38, 37, 39);
+    box-shadow: 0 0 5px #666464, 0 0 5px #5a5959 inset;
+    padding: 2rem 7%;
+}
+.form__sub--content h3{
+    text-align: center;
+    color: rgb(231, 71, 71);
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+.form__card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+.form__card input{
+    width: 100%;
+    padding: 1rem 2rem;
+}
+.form__submit{
+    margin-top: 3rem;
+    padding: .6rem 2rem;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: black;
+}
+.form__checkbox{
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.form__checkbox input{
+    margin-right: 1rem;
+}
+.form__sub--content p{
+    margin-top: 5rem;
+    text-align: justify;
+    font-size: 2rem;
+    color: white;
+}
+.form__sub--content p a{
+    color: rgb(235, 206, 43);
+    text-decoration: underline;
+}
+.form__notify{
+    background: lightgreen;
+    position: fixed;
+    right: 0;
+    top: 10rem;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}   
+.form__notify h3{
+    padding: 1rem 2rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -888,6 +977,9 @@ header {
     .song-side {
         position: fixed;
         right: 0;
+    }
+    .form__login{
+        width: 50%;
     }
 }
 
@@ -956,6 +1048,9 @@ header {
     }
      .bar{
         width: 100%;
+    }
+    .form__login{
+        width: 68%;
     }
 }
 
@@ -1031,5 +1126,8 @@ header {
     }
     .user__setting{
         width: 138px;
+    }
+    .form__login{
+        width: 100%;
     }
 }
