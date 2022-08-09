@@ -63,7 +63,6 @@ header {
     overflow-y: auto;
     background: #0b1320;
 }
-
 .master_play {
     width: 100%;
     height: 10%;
@@ -585,12 +584,12 @@ header {
 
 .content h1 {
     font-size: 2rem;
-    color: white;
+    color: greenyellow;
     font-weight: 600;
 }
 
 .content p {
-    color: rgb(136, 132, 132);
+    color: rgb(209, 203, 203);
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem 0;
@@ -672,17 +671,21 @@ header {
 .pop__song::-webkit-scrollbar {
     width: .5rem;
     height: .5rem;
+    cursor: pointer;
 }
 .pop__song-music::-webkit-scrollbar {
     width: .5rem;
     height: .5rem;
+    cursor: pointer;
 }
 
 .pop__song::-webkit-scrollbar-thumb {
+    cursor: pointer;
     background: #6aec36;
     border-radius: 8rem;
 }
 .pop__song-music::-webkit-scrollbar-thumb {
+    
     background: #36e2ec;
     border-radius: 8rem;
 }
@@ -854,6 +857,7 @@ header {
     align-items: center;
     cursor: pointer;
     transition: .2s;
+    color:white;
 }
 .user__setting-music:hover{
     background: lightskyblue;
@@ -874,6 +878,9 @@ header {
 }
 .bx-fullscreen{
     color:yellow;
+}
+.bxs-color{
+    color: #e9971c;
 }
 .form__login{
     width: 40%;
@@ -917,6 +924,7 @@ header {
     text-align: center;
     color: white;
     background: black;
+    cursor: pointer;
 }
 .form__checkbox{
     margin-top: 2rem;
@@ -924,6 +932,7 @@ header {
     color: white;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .form__checkbox input{
     margin-right: 1rem;
@@ -936,7 +945,7 @@ header {
 }
 .form__sub--content p a{
     color: rgb(235, 206, 43);
-    text-decoration: underline;
+    text-decoruser__settingation: underline;
 }
 .form__notify{
     background: lightgreen;
@@ -950,14 +959,100 @@ header {
     padding: 1rem 2rem;
     font-size: 2rem;
 }
-
-
-
-
-
-
-
-
+.setting__color{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 100;
+    display: none;
+}
+.setting__color.active{
+    display: block;
+}
+.setting__color--close{
+    position: absolute;
+    right: 0;
+    font-size: 3.4rem;
+    color: white;
+    font-weight: 600;
+    padding: .5rem 1.3rem;
+    cursor: pointer;
+    top: 0;
+    background: red;
+}
+.form__setting--color{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 7%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.form__setting--color h1{
+    font-size: 2.5rem;
+    color: rgb(62, 233, 27);
+}
+.form__color-text h1{
+    margin-top: 5rem;
+    color: white;
+    font-weight: 200;
+}
+.form__change-color{
+    display: inline;
+    margin: 2rem 0;
+}
+.form__change-color div{
+    margin: 1rem;
+    padding: .5rem 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: inline-flex;
+    cursor: pointer;
+}
+.form__change-color div:nth-child(1){
+    background: white;
+}
+.form__change-color div:nth-child(2){
+    background: rgb(43, 175, 228);
+}
+.form__change-color div:nth-child(3){
+    background: rgb(238, 61, 61);
+}
+.form__change-color div:nth-child(4){
+    background: rgb(67, 170, 72);
+}
+.form__change-color div:nth-child(5){
+    background: rgb(248, 61, 148);
+}
+.form__change-color div:nth-child(6){
+    background: rgb(221, 192, 26);
+}
+.form__change-color div:nth-child(7){
+    background: #0b1320;
+    position: relative;
+}
+.changecolor-default::before{
+    content:'';
+    background: greenyellow;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    clip-path: polygon(100% 90%, 0 0, 100% 0);
+    border-top-right-radius: 5px;
+}
+.form__setting--color--text{
+    display: flex;
+    align-items: center;
+}
+.form__setting--color--text i{
+    margin-right: 1rem;
+    font-size: 3rem;
+    color: rgb(62, 233, 27);
+}
 
 
 
@@ -1129,5 +1224,8 @@ header {
     }
     .form__login{
         width: 100%;
+    }
+    .setting__color--close{
+        font-size: 3rem;
     }
 }

@@ -675,3 +675,44 @@ inputSeach.addEventListener('keyup',()=>{
     }
 
 })
+//openSetting
+const openSetting = document.querySelector('.open__setting')
+const showSetting = document.querySelector('.setting__color')
+
+openSetting.addEventListener('click',()=>{
+    showSetting.classList.add('active')
+})
+
+//close setting
+const closeSetting = document.querySelector('.setting__color--close')
+closeSetting.addEventListener('click',()=>{
+    showSetting.classList.remove('active')
+})
+
+//change color setting
+const changeBackgroundColor = document.querySelector('.song-side')
+document.querySelector('.changecolor__white').addEventListener('click',function(){
+    changeBackgroundColor.style.backgroundColor = 'white'
+})
+document.querySelector('.changecolor__blue').addEventListener('click',function(){
+    changeBackgroundColor.style.backgroundColor = 'rgb(43, 175, 228)'
+})
+document.querySelector('.changecolor__red').addEventListener('click',function(){
+    changeBackgroundColor.style.backgroundColor = 'rgb(238, 61, 61)'
+})
+
+document.querySelector('.changecolor__green').addEventListener('click',function(){
+    changeBackgroundColor.style.backgroundColor = 'rgb(67, 170, 72)'
+})
+
+document.querySelector('.changecolor__pink').addEventListener('click',function(){
+    changeBackgroundColor.style.backgroundColor = 'rgb(248, 61, 148)'
+})
+
+document.querySelector('.changecolor__yellow').addEventListener('click',function(){
+    changeBackgroundColor.style.backgroundColor = 'rgb(221, 192, 26)'
+})
+
+document.querySelector('.changecolor-default').addEventListener('click',function(){
+    changeBackgroundColor.style.backgroundColor = '#0b1320'
+})
