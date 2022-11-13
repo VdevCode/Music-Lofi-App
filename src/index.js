@@ -142,14 +142,14 @@ popArtistRight.addEventListener('click', function () {
 const Songs = [
     {
         id: 01,
-        songName: `Industry Baby <br>
-        <div class="sub__author">Linas X</div>`,
+        songName: `Họ yêu ai mất rồi<br>
+        <div class="sub__author">Doãn Hiếu</div>`,
         poster: './image/1.jpg',
     },
     {
         id: 02,
-        songName: `Summer Song<br>
-        <div class="sub__author">Ncs</div>`,
+        songName: `Cuối cùng thì<br>
+        <div class="sub__author">J97</div>`,
         poster: './image/bai2.jpg',
     },
     {
@@ -302,6 +302,145 @@ const Songs = [
         <div class="sub__author">Phạm Kỳ Anh</div>`,
         poster: './image/27.jpg',
     },
+    {
+        id: 28,
+        songName: `We Wish You A Merry Christmas<br>
+        <div class="sub__author">Crazy Frog</div>`,
+        poster: './image/28.jpg',
+    },
+    {
+        id: 29,
+        songName: `CHIỀU THU HỌA BÓNG NÀNG REMIX<br>
+        <div class="sub__author">DATKAA x QT BEATZ</div>`,
+        poster: './image/29.jpg',
+    },
+    {
+        id: 30,
+        songName: `hạ con vuong nang<br>
+        <div class="sub__author">DATKAA </div>`,
+        poster: './image/30.jpg',
+    },
+    {
+        id: 31,
+        songName: `Yume wo kanaete Doraemon<br>
+        <div class="sub__author">MAO</div>`,
+        poster: './image/31.jpg',
+    },
+    {
+        id: 32,
+        songName: `Waiting For You<br>
+        <div class="sub__author">MONO</div>`,
+        poster: './image/32.jpg',
+    },
+    {
+        id: 33,
+        songName: `Mang tiền về cho mẹ<br>
+        <div class="sub__author">Đen Vâu</div>`,
+        poster: './image/33.jpg',
+    },
+    {
+        id: 34,
+        songName: `Mấy lần 10 năm<br>
+        <div class="sub__author">Đen Vâu</div>`,
+        poster: './image/34.jpg',
+    },
+    {
+        id: 35,
+        songName: `Moskou<br>
+        <div class="sub__author">---</div>`,
+        poster: './image/27.jpg',
+    },
+    {
+        id: 36,
+        songName: `Hotaru<br>
+        <div class="sub__author">Maiko Fujita</div>`,
+        poster: './image/36.jpg',
+    },
+    
+    {
+        id: 37,
+        songName: `Shiawase no Yokan (幸せの予感)<br>
+        <div class="sub__author">Naozumi Kamata; Yūko Yamaji</div>`,
+        poster: './image/37.jpg',
+    },
+    
+    {
+        id: 38,
+        songName: `Ai Wo Komete Umi<br>
+        <div class="sub__author">Aoi Teshima</div>`,
+        poster: './image/38.jpg',
+    },
+    {
+        id: 39,
+        songName: `Happy New Year<br>
+        <div class="sub__author">A.B.B.A</div>`,
+        poster: './image/39.jpg',
+    },
+    
+    {
+        id:40,
+        songName: `Rockabye<br>
+        <div class="sub__author">Clean Bandit; Sean Paul; Anne-Marie</div>`,
+        poster: './image/40.jpg',
+    },
+    
+    {
+        id: 41,
+        songName: `Tiền nhiều để làm gì<br>
+        <div class="sub__author">GDUCKY</div>`,
+        poster: './image/41.jpg',
+    },
+    {
+        id: 42,
+        songName: `Breakfast<br>
+        <div class="sub__author">GDUCKY</div>`,
+        poster: './image/42.jpg',
+    },
+    {
+        id: 43,
+        songName: `Ông Bà Già Tao Lo Hết<br>
+        <div class="sub__author">Bình Gold, Lil Shady</div>`,
+        poster: './image/43.jpg',
+    },
+    {
+        id: 44,
+        songName: `Illusionary Daytime<br>
+        <div class="sub__author">GDUCKY</div>`,
+        poster: './image/44.jpg',
+    },
+    {
+        id: 45,
+        songName: `Yume To Hazakura<br>
+        <div class="sub__author">Kurenai
+        </div>`,
+        poster: './image/45.jpg',
+    },
+    {
+        id: 46,
+        songName: `Lofi Study<br>
+        <div class="sub__author">FASSounds</div>`,
+        poster: './image/46.jpg',
+    },
+    {
+        id: 47,
+        songName: `
+        Wish you were here<br>
+        <div class="sub__author">Lofi hour</div>`,
+        poster: './image/47.jpg',
+    },
+    {
+        id: 48,
+        songName: `Daily routine work<br>
+        <div class="sub__author">Lofi hour</div>`,
+        poster: './image/48.jpg',
+    },
+    {
+        id: 49,
+        songName: `The journey ends<br>
+        <div class="sub__author">Lofi hour</div>`,
+        poster: './image/20.jpg',
+    },
+    
     
 ]
 
@@ -402,8 +541,6 @@ Array.from(playSongs).forEach((e, i) => {
     
 
 })
-
-
 
 //time start && time end
 const timeStart = document.getElementById('currentStart')
@@ -716,3 +853,12 @@ document.querySelector('.changecolor__yellow').addEventListener('click',function
 document.querySelector('.changecolor-default').addEventListener('click',function(){
     changeBackgroundColor.style.backgroundColor = '#0b1320'
 })
+
+
+// const hidenSongs = document.querySelector(".active-songside")
+// hidenSongs.addEventListener("scroll",()=>{
+//     if(hidenSongs.scrollHeight >= 100){
+//         hidenSongs.style.position = "fixed";
+//         hidenSongs.style.backgroundColor = "red";
+//     }
+// })
