@@ -440,7 +440,24 @@ const Songs = [
         <div class="sub__author">Lofi hour</div>`,
         poster: './image/20.jpg',
     },
-    
+    {
+        id: 50,
+        songName: `Music for study<br>
+        <div class="sub__author">Lofi hour</div>`,
+        poster: './image/23.jpg',
+    },
+    {
+        id: 51,
+        songName: `Always With Me<br>
+        <div class="sub__author">Lofi hour</div>`,
+        poster: './image/51.jpg',
+    },
+    {
+        id: 52,
+        songName: `Castle in the sky<br>
+        <div class="sub__author">Lofi hour</div>`,
+        poster: './image/52.jpg',
+    },
     
 ]
 
@@ -805,6 +822,7 @@ inputSeach.addEventListener('keyup',()=>{
         }
         if(inputSeach.value ==0){
             searchResult.style.display = 'none'
+            searchResult.style.zIndex = 0;
         }
         else{
             searchResult.style.display = 'block'
