@@ -1413,4 +1413,10 @@ header {
     .setting__color--close {
         font-size: 3rem;
     }
+    .playlist h4{
+        font-size: 1.7rem;
+    }
+    .menu-box-text-h1{
+        font-size: 2.4rem !important;
+    }
 }

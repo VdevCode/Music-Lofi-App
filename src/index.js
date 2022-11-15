@@ -56,39 +56,6 @@ buttonsRight.addEventListener('click',function(){
 })
 
 
-// buttonAllow.addEventListener('click',()=>{
-//     showTextButtons.innerText = 'Đang Play...'
-//     ClickPauseSong()
-//     ClickPlaySong()
-// })
-
-// function ClickPauseSong(){
-//     if(showTextButtons.classList.contains = 'Đang Play...'){
-//         buttonAllow.addEventListener('click',()=>{
-//             showTextButtons.innerText = 'Play'
-//             playMusic.classList.add('bx-play')
-//             posterPlay.classList.remove('active')
-//             posterPlay.classList.remove('active')
-//             music.play()
-//         })   
-//     }
-// //    ClickPlaySong()
-
-// }
-
-// function ClickPlaySong(){
-//     if(showTextButtons.classList.contains = 'Play'){
-//         buttonAllow.addEventListener('click',()=>{
-//                  showTextButtons.innerText = 'Đang Play...'
-//                  posterPlay.classList.add('active')
-//                  playMusic.classList.add('bx-pause')
-//                   playMusic.classList.remove('bx-play')
-//                  music.pause()
-//         })
-//      }
-// }
-
-
 //open menu
 let openMenu = document.querySelector('.bxs-grid')
 let showMenu = document.querySelector('.menu-side')
@@ -99,12 +66,6 @@ openMenu.addEventListener('click',function(){
     showUser.classList.remove('active')
    
 })
-
-// const buttonPlaySong = document.querySelector('.bxs-caret-right-circle')
-// buttonPlaySong.addEventListener('click',function(){
-//     buttonPlaySong.classList.remove('bxs-caret-right-circle')
-//     buttonPlaySong.classList.add('bx-stop-circle')
-// })
 
 //close menu
 let closeMenu = document.querySelector('.bx-x')
@@ -871,12 +832,3 @@ document.querySelector('.changecolor__yellow').addEventListener('click',function
 document.querySelector('.changecolor-default').addEventListener('click',function(){
     changeBackgroundColor.style.backgroundColor = '#0b1320'
 })
-
-
-// const hidenSongs = document.querySelector(".active-songside")
-// hidenSongs.addEventListener("scroll",()=>{
-//     if(hidenSongs.scrollHeight >= 100){
-//         hidenSongs.style.position = "fixed";
-//         hidenSongs.style.backgroundColor = "red";
-//     }
-// })
