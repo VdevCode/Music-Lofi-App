@@ -115,6 +115,36 @@ header {
     height: 140px;
     margin-right: 1rem;
     border-radius: 4px;
+
+}
+.song__item-menu{
+    position: relative;
+}
+.description-vip{
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+.description-vip i{
+    color: rgb(250, 57, 23);
+    font-size: 2rem;
+    background: rgb(238, 234, 9);
+    padding: .5rem;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 6px;
+}
+.noel-picture-image{
+    position: absolute;
+    top: -30px;
+    left: -10px;
+}
+.noel-picture-image img{
+    width: 50px;
+    height: 50px;
+  
 }
 .pop__song-music-chill::-webkit-scrollbar{
     width: .5rem;
@@ -629,6 +659,14 @@ header {
     height: 100%;
     border-radius: 50%;
     cursor: pointer;
+    position: relative;
+}
+.image__noel--setting{
+    position: absolute;
+    top: -20px;
+    right: -8px;
+    width: 35px;
+    height: 40px;
 }
 
 .box__menu {
