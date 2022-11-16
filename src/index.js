@@ -832,3 +832,20 @@ document.querySelector('.changecolor__yellow').addEventListener('click',function
 document.querySelector('.changecolor-default').addEventListener('click',function(){
     changeBackgroundColor.style.backgroundColor = '#0b1320'
 })
+
+//tabs in js
+const changeTabs = document.querySelectorAll(".playlist .playlist__text")
+const contentTabs = document.querySelectorAll(".menu__songs-list")
+
+changeTabs.forEach((tab,index) =>{
+    tab.addEventListener("click",()=>{
+
+        changeTabs.forEach(tab => tab.classList.remove("font-color"))
+
+        tab.classList.add("font-color")
+
+        contentTabs.forEach(all => all.classList.remove("font-color"))
+
+        contentTabs[index].classList.add("font-color")
+    })
+})

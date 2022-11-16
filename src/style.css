@@ -9,7 +9,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
-    transition: .5s;
+    /* transition: .5s; */
     scroll-behavior: smooth;
 }
 
@@ -90,9 +90,6 @@ header {
     margin-right: 2rem;
 }
 
-.bxs-playlist {
-    color: #36e2ec;
-}
 
 .menu-side h1 {
     font-size: 3rem;
@@ -188,7 +185,7 @@ header {
 .menu__songs-list {
     overflow-y: auto;
     height: 100%;
-
+    display: none;
 }
 
 .menu__songs-list::-webkit-scrollbar {
@@ -667,6 +664,7 @@ header {
     right: -8px;
     width: 35px;
     height: 40px;
+    display: none;
 }
 
 .box__menu {
@@ -738,7 +736,14 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+.menu__song-list__text-font{
+    color: yellow;
+    font-size: 2rem;
+    text-align: center;
+}
+.menu__songs-list.font-color{
+    display: block;
+}
 .h4 h4 {
     font-size: 2rem;
     color: white;
