@@ -1,27 +1,27 @@
 const buttonAllow = document.querySelector('.buttons')
 const showTextButtons = document.querySelector('.buttons button')
-buttonAllow.addEventListener('click',()=>{
-   
-        showTextButtons.innerText = 'Đang Play...'
-        if(music.play()){
-            if(showTextButtons.innerText = 'Đang Play...'){
-                playMusic.classList.add('bx-pause')
-                playMusic.classList.remove('bx-play')
-                posterPlay.classList.add('active')
-                buttonAllow.addEventListener('click',()=>{
-                    showTextButtons.innerText = 'PLAY'
-                    playMusic.classList.remove('bx-pause')
-                    playMusic.classList.add('bx-play')
-                    posterPlay.classList.remove('active')
-                    music.pause()
-                })
-            }
-            music.play()
+buttonAllow.addEventListener('click', () => {
+
+    showTextButtons.innerText = 'Đang Play...'
+    if (music.play()) {
+        if (showTextButtons.innerText = 'Đang Play...') {
+            playMusic.classList.add('bx-pause')
+            playMusic.classList.remove('bx-play')
+            posterPlay.classList.add('active')
+            buttonAllow.addEventListener('click', () => {
+                showTextButtons.innerText = 'PLAY'
+                playMusic.classList.remove('bx-pause')
+                playMusic.classList.add('bx-play')
+                posterPlay.classList.remove('active')
+                music.pause()
+            })
         }
-        else{
-            if(music.pause()){
-            if(showTextButtons.classList.contains = 'PLAY'){
-                buttonAllow.addEventListener('click',()=>{
+        music.play()
+    }
+    else {
+        if (music.pause()) {
+            if (showTextButtons.classList.contains = 'PLAY') {
+                buttonAllow.addEventListener('click', () => {
                     showTextButtons.innerText = 'Đang Play...'
                     playMusic.classList.add('bx-pause')
                     playMusic.classList.remove('bx-play')
@@ -30,17 +30,18 @@ buttonAllow.addEventListener('click',()=>{
                 })
             }
             music.pause()
-        }}
+        }
+    }
 
-        playMusic.addEventListener('click',()=>{
-           if(playMusic.classList.contains('bx-play')){       
-               posterPlay.classList.remove('active')
-            }
-            else{
-               showTextButtons.innerText = 'Đang Play...'
-               
-            }
-        })       
+    playMusic.addEventListener('click', () => {
+        if (playMusic.classList.contains('bx-play')) {
+            posterPlay.classList.remove('active')
+        }
+        else {
+            showTextButtons.innerText = 'Đang Play...'
+
+        }
+    })
 })
 
 //music vietnam button
@@ -48,10 +49,10 @@ const buttonsLeft = document.querySelector('#music_button-left')
 const buttonsRight = document.querySelector('#music_button-right')
 const boxSong = document.getElementsByClassName('pop__song-music')[0]
 
-buttonsLeft.addEventListener('click',function(){
+buttonsLeft.addEventListener('click', function () {
     boxSong.scrollLeft -= 330
 })
-buttonsRight.addEventListener('click',function(){
+buttonsRight.addEventListener('click', function () {
     boxSong.scrollLeft += 330
 })
 
@@ -61,15 +62,15 @@ let openMenu = document.querySelector('.bxs-grid')
 let showMenu = document.querySelector('.menu-side')
 
 
-openMenu.addEventListener('click',function(){
+openMenu.addEventListener('click', function () {
     showMenu.classList.add('active')
     showUser.classList.remove('active')
-   
+
 })
 
 //close menu
 let closeMenu = document.querySelector('.bx-x')
-closeMenu.addEventListener('click',function(){
+closeMenu.addEventListener('click', function () {
     showMenu.classList.remove('active')
 })
 
@@ -233,19 +234,19 @@ const Songs = [
         <div class="sub__author">Dương Minh Tuấn</div>`,
         poster: './image/22.jpg',
     },
-     {
+    {
         id: 23,
         songName: `em ơi anh phải làm sao<br>
         <div class="sub__author">Dương Minh Tuấn</div>`,
         poster: './image/23.jpg',
     },
-     {
+    {
         id: 24,
         songName: `anh yêu vội thế<br>
         <div class="sub__author">Mee Remix</div>`,
         poster: './image/24.jpg',
     },
-     {
+    {
         id: 25,
         songName: `tướng quân<br>
         <div class="sub__author">Nhật Phong</div>`,
@@ -317,14 +318,14 @@ const Songs = [
         <div class="sub__author">Maiko Fujita</div>`,
         poster: './image/36.jpg',
     },
-    
+
     {
         id: 37,
         songName: `Shiawase no Yokan (幸せの予感)<br>
         <div class="sub__author">Naozumi Kamata; Yūko Yamaji</div>`,
         poster: './image/37.jpg',
     },
-    
+
     {
         id: 38,
         songName: `Ai Wo Komete Umi<br>
@@ -337,14 +338,14 @@ const Songs = [
         <div class="sub__author">A.B.B.A</div>`,
         poster: './image/39.jpg',
     },
-    
+
     {
-        id:40,
+        id: 40,
         songName: `Rockabye<br>
         <div class="sub__author">Clean Bandit; Sean Paul; Anne-Marie</div>`,
         poster: './image/40.jpg',
     },
-    
+
     {
         id: 41,
         songName: `Tiền nhiều để làm gì<br>
@@ -419,7 +420,7 @@ const Songs = [
         <div class="sub__author">Lofi hour</div>`,
         poster: './image/52.jpg',
     },
-    
+
 ]
 
 
@@ -507,7 +508,7 @@ Array.from(playSongs).forEach((e, i) => {
             let { songName, poster } = elss
             titleSong.innerHTML = songName
             posterPlay.src = poster
-            downloadMusic.setAttribute('download',songName) 
+            downloadMusic.setAttribute('download', songName)
         })
 
         makeAllBackground()
@@ -516,7 +517,7 @@ Array.from(playSongs).forEach((e, i) => {
         event.target.classList.remove('bxs-caret-right-circle')
         event.target.classList.add('bx-stop-circle')
     })
-    
+
 
 })
 
@@ -598,11 +599,11 @@ let backMusic = document.getElementById('back')
 let nextMusic = document.getElementById('next')
 let downMusic = document.getElementById('download')
 
-backMusic.addEventListener('click',function(){
-    index-=1
-    if(index <1){
+backMusic.addEventListener('click', function () {
+    index -= 1
+    if (index < 1) {
         index = 1
-        
+
     }
     music.src = `./audio/${index}.mp3`
     // posterPlay.src = `./image/${index}.jpg`
@@ -622,18 +623,18 @@ backMusic.addEventListener('click',function(){
         let { songName, poster } = elss
         titleSong.innerHTML = songName
         posterPlay.src = poster
-        downloadMusic.setAttribute('download',songName) 
+        downloadMusic.setAttribute('download', songName)
     })
 
     makeAllBackground()
     Array.from(backgroundSong)[index - 1].style.background = 'rgb(105,105,170,.1)'
     makeAllPlay()
- 
+
 })
 
-nextMusic.addEventListener('click',function(){
+nextMusic.addEventListener('click', function () {
     index++
-    if(index > Array.from(Songs).length){
+    if (index > Array.from(Songs).length) {
         index = Array.from(Songs).length
         alert('bài cuối r đó,đừng ấn qua bài tiếp theo nữa')
     }
@@ -643,7 +644,7 @@ nextMusic.addEventListener('click',function(){
     playMusic.classList.add('bx-pause')
     playMusic.classList.remove('bx-play')
     posterPlay.classList.add('active')
-     showTextButtons.innerText = 'Đang Play...'
+    showTextButtons.innerText = 'Đang Play...'
     music.play()
 
     let songTitles = Songs.filter((els) => {
@@ -655,24 +656,24 @@ nextMusic.addEventListener('click',function(){
         let { songName, poster } = elss
         titleSong.innerHTML = songName
         posterPlay.src = poster
-        downloadMusic.setAttribute('download',songName) 
+        downloadMusic.setAttribute('download', songName)
     })
 
 
     makeAllBackground()
     Array.from(backgroundSong)[index - 1].style.background = 'rgb(105,105,170,.1)'
     makeAllPlay()
-  
+
 })
 
 //auto play
-music.addEventListener('ended',()=>{
+music.addEventListener('ended', () => {
     index++
-    if(index > Array.from(Songs).length){
+    if (index > Array.from(Songs).length) {
         // index = Array.from(Songs).length
         index = 0
         index++
-       
+
     }
     music.src = `./audio/${index}.mp3`
     // posterPlay.src = `./image/${index}.jpg`
@@ -693,7 +694,7 @@ music.addEventListener('ended',()=>{
         let { songName, poster } = elss
         titleSong.innerHTML = songName
         posterPlay.src = poster
-        downloadMusic.setAttribute('download',songName) 
+        downloadMusic.setAttribute('download', songName)
     })
 
     makeAllBackground()
@@ -708,18 +709,18 @@ const shuffle = document.getElementById('shuffle')
 const popupShuffle = document.querySelector('.popup__shuffle')
 
 
-shuffle.addEventListener('click',poPupShuffle)
+shuffle.addEventListener('click', poPupShuffle)
 
-function poPupShuffle(){
+function poPupShuffle() {
     popupShuffle.classList.add('active')
     playMusic.classList.add('bx-pause')
     playMusic.classList.remove('bx-play')
     posterPlay.classList.add('active')
     showTextButtons.innerText = 'Đang Play...'
-    music.play() 
+    music.play()
 }
 
-popupShuffle.addEventListener('click',()=>{
+popupShuffle.addEventListener('click', () => {
     popupShuffle.classList.remove('active')
 })
 
@@ -746,15 +747,15 @@ fsEnter.addEventListener('click', function (e) {
 let openUser = document.querySelector('.image__setting')
 let showUser = document.querySelector('.user__setting')
 
-openUser.addEventListener('click',function(){
+openUser.addEventListener('click', function () {
     showUser.classList.toggle('active')
 })
 
 //search result
 let searchResult = document.getElementsByClassName('search_result')[0]
 
-Songs.forEach(element =>{
-    const {id,songName,poster} = element
+Songs.forEach(element => {
+    const { id, songName, poster } = element
     let cardSearch = document.createElement('a')
     // cardSearch.href ="#" + id
     cardSearch.classList.add('cart__search')
@@ -768,24 +769,24 @@ Songs.forEach(element =>{
 })
 
 let inputSeach = document.getElementsByClassName('input__seach-result')[0]
-inputSeach.addEventListener('keyup',()=>{
+inputSeach.addEventListener('keyup', () => {
     let inputSearchValue = inputSeach.value.toUpperCase().trim()
     let itemsSearch = searchResult.getElementsByTagName('a')
 
-    for(let index = 0;index<itemsSearch.length;index++){
+    for (let index = 0; index < itemsSearch.length; index++) {
         let elementItems = itemsSearch[index].getElementsByClassName('content__search')[0]
         let textValue = elementItems.textContent || elementItems.innerHTML
-        if(textValue.toUpperCase().indexOf(inputSearchValue) > -1){
+        if (textValue.toUpperCase().indexOf(inputSearchValue) > -1) {
             itemsSearch[index].style.display = 'flex'
         }
-        else{
+        else {
             itemsSearch[index].style.display = 'none'
         }
-        if(inputSeach.value ==0){
+        if (inputSeach.value == 0) {
             searchResult.style.display = 'none'
             searchResult.style.zIndex = 0;
         }
-        else{
+        else {
             searchResult.style.display = 'block'
         }
     }
@@ -795,50 +796,97 @@ inputSeach.addEventListener('keyup',()=>{
 const openSetting = document.querySelector('.open__setting')
 const showSetting = document.querySelector('.setting__color')
 
-openSetting.addEventListener('click',()=>{
+openSetting.addEventListener('click', () => {
     showSetting.classList.add('active')
 })
 
 //close setting
 const closeSetting = document.querySelector('.setting__color--close')
-closeSetting.addEventListener('click',()=>{
+closeSetting.addEventListener('click', () => {
     showSetting.classList.remove('active')
 })
 
 //change color setting
 const changeBackgroundColor = document.querySelector('.song-side')
-document.querySelector('.changecolor__white').addEventListener('click',function(){
+const fontContent = document.querySelector(".content h1")
+const fontHeader = document.querySelectorAll('.content p')
+const fontMusic = document.querySelectorAll('.song__item-menu h1')
+const fontTitleMusic = document.querySelectorAll('.h4 h4')
+const fontAuthor = document.querySelectorAll(".sub__author")
+
+document.querySelector('.changecolor__white').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'white'
+    fontContent.style.color = '#c91635'
+
+    fontHeader.forEach((fontHead) => {
+        fontHead.style.color = 'black'
+    })
+    fontMusic.forEach((editFont) => {
+        editFont.style.color = 'black'
+    })
+    fontTitleMusic.forEach((fontTitle) => {
+        fontTitle.style.color = 'black'
+    })
+    fontAuthor.forEach((subAuthor)=>{
+        subAuthor.style.color = '#4e3c3c'
+    })
 })
-document.querySelector('.changecolor__blue').addEventListener('click',function(){
+document.querySelector('.changecolor__blue').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'rgb(43, 175, 228)'
+    fontMusic.forEach((editFont) => {
+        editFont.style.color = 'black'
+    })
+    fontHeader.forEach((fontHead) => {
+        fontHead.style.color = 'black'
+    })
+    fontAuthor.forEach((subAuthor)=>{
+        subAuthor.style.color = '#4e3c3c'
+    })
+    fontContent.style.color = '#c91635'
 })
-document.querySelector('.changecolor__red').addEventListener('click',function(){
+document.querySelector('.changecolor__red').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'rgb(238, 61, 61)'
+    fontContent.style.color = 'rgb(42 234 214)'
+    fontAuthor.forEach((subAuthor)=>{
+        subAuthor.style.color = '#e7bfbf'
+    })
 })
 
-document.querySelector('.changecolor__green').addEventListener('click',function(){
+document.querySelector('.changecolor__green').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'rgb(67, 170, 72)'
 })
 
-document.querySelector('.changecolor__pink').addEventListener('click',function(){
+document.querySelector('.changecolor__pink').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'rgb(248, 61, 148)'
 })
 
-document.querySelector('.changecolor__yellow').addEventListener('click',function(){
+document.querySelector('.changecolor__yellow').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'rgb(221, 192, 26)'
 })
 
-document.querySelector('.changecolor-default').addEventListener('click',function(){
+document.querySelector('.changecolor-default').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = '#0b1320'
+    fontContent.style.color = 'greenyellow'
+    fontHeader.forEach((fontHead) => {
+        fontHead.style.color = 'white'
+    })
+    fontAuthor.forEach((subAuthor)=>{
+        subAuthor.style.color = 'gray'
+    })
+    fontMusic.forEach((editFont) => {
+        editFont.style.color = 'white'
+    })
+    fontMusic.forEach((editFont) => {
+        editFont.style.color = 'white'
+    })
 })
 
 //tabs in js
 const changeTabs = document.querySelectorAll(".playlist .playlist__text")
 const contentTabs = document.querySelectorAll(".menu__songs-list")
 
-changeTabs.forEach((tab,index) =>{
-    tab.addEventListener("click",()=>{
+changeTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
 
         changeTabs.forEach(tab => tab.classList.remove("font-color"))
 

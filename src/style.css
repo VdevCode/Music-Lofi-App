@@ -1529,4 +1529,7 @@ header {
     .form__setting--color--text h1{
         font-size: 2rem;
     }
+    .h4 h4{
+        font-size: 1.8rem;
+    }
 }
