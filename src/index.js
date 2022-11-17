@@ -849,3 +849,5 @@ changeTabs.forEach((tab,index) =>{
         contentTabs[index].classList.add("font-color")
     })
 })
+
+
