@@ -9,7 +9,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
-    /* transition: .5s; */
+    transition: .2s;
     scroll-behavior: smooth;
 }
 
@@ -208,6 +208,13 @@ header {
     cursor: pointer;
     background: rgb(105, 105, 170, .0);
     text-transform: capitalize;
+}
+.wifi__connect .bx-wifi{
+    color: greenyellow;
+    font-size: 2.5rem;
+}
+.how-songside-header{
+    align-items: center;
 }
 
 /* .song__item:hover{
