@@ -969,14 +969,14 @@ header {
 .user__setting {
     position: absolute;
     color: white;
-    background: rgb(24, 23, 23);
+    background: rgb(60, 59, 59);
     right: -2rem;
     border-radius: 6px;
     margin-top: .7rem;
     width: 170px;
     z-index: 11;
     display: none;
-    box-shadow: 0 0 5px #666464, 0 0 5px #5a5959 inset;
+  
 }
 
 .user__setting.active {
@@ -985,7 +985,7 @@ header {
 
 .user__setting::before {
     content: '';
-    background: rgb(24, 23, 23);
+    background: rgb(60, 59, 59);
     position: absolute;
     top: -.7rem;
     width: 15px;
@@ -1442,7 +1442,7 @@ header {
         position: absolute;
         padding: .7rem 7%;
         text-align: center;
-        top: -47%;
+        top: -4vh;
         background: #111727;
         transform: translateX(-50%);
         margin-left: 50%;
