@@ -689,7 +689,7 @@ header {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem 0;
-    text-align: j;
+    text-align: justify;
 }
 
 .buttons {
@@ -1442,7 +1442,7 @@ header {
         position: absolute;
         padding: .7rem 7%;
         text-align: center;
-        top: -48%;
+        top: -47%;
         background: #111727;
         transform: translateX(-50%);
         margin-left: 50%;
@@ -1522,5 +1522,11 @@ header {
     }
     .change--background--tet{
         width: 300px;
+    }
+    .form__color-text h1{
+        font-size: 1.7rem;
+    }
+    .form__setting--color--text h1{
+        font-size: 2rem;
     }
 }
