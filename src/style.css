@@ -1298,25 +1298,148 @@ header {
 .show-songside-header{
     display: none;
 }
-.snow{
-    width: 100%;
-    position: absolute;
-    height: 100%;
-}
+
 .clock {
-   
-    
-    
-    
     color: #44f314;
     font-size:1.5rem;
     font-family:sans-serif;
-   
     margin: 1rem 0;
-
-
 }
+.loading{
+    text-align: center;
+}
+.loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem;
+    background: #007DB6;
+    border-radius: .6em;
+    animation: loading 1s infinite alternate;
+  }
+  
+  /*
+   * Dots Colors
+   * Smarter targeting vs nth-of-type?
+   */
+  .loading span:nth-of-type(2) {
+    background: #d4c306;
+    animation-delay: 0.2s;
+  }
+  .loading span:nth-of-type(3) {
+    background: #d17805;
+    animation-delay: 0.4s;
+  }
+  .loading span:nth-of-type(4) {
+    background: #00A77D;
+    animation-delay: 0.6s;
+  }
+  .loading span:nth-of-type(5) {
+    background: #00B247;
+    animation-delay: 0.8s;
+  }
+  .loading span:nth-of-type(6) {
+    background: #de1414;
+    animation-delay: 1.0s;
+  }
+  .loading span:nth-of-type(7) {
+    background: #A0B61E;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
+  .loadings {
+    background: #16171d;
+    opacity: 0.9;
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .loadings > div {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    transform: translateX(50%);
+    left: 25%;
+  }
+  
+  
+  .loadings > div > div {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #92ea5b;
+    top: 10px;
+    left: 10px;
+    transform-origin: 20px 20px;
+    border-radius: 8px;
+    animation: spin-a 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+  }
+
+  
+  .loadings > div > .c2 {
+    top: 10px;
+    left: auto;
+    right: 10px;
+    transform-origin: -4px 20px;
+    animation: spin-b 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+  }
+  .loadings > div > .c3 {
+    top: auto;
+    left: auto;
+    right: 10px;
+    bottom: 10px;
+    transform-origin: -4px -4px;
+    animation: spin-c 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+  }
+  .loadings > div > .c4 {
+    top: auto;
+    bottom: 10px;
+    transform-origin: 20px -4px;
+    animation: spin-d 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+  }
+  
+  @keyframes spin-a {
+    0%   { transform: rotate(90deg); }
+    0%  { transform: rotate(90deg); }
+    50%  { transform: rotate(180deg); }
+    75%  { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes spin-b {
+    0%   { transform: rotate(90deg); }
+    25%  { transform: rotate(90deg); }
+    25%  { transform: rotate(180deg); }
+    75%  { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes spin-c {
+    0%   { transform: rotate(90deg); }
+    25%  { transform: rotate(90deg); }
+    50%  { transform: rotate(180deg); }
+    50%  { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes spin-d {
+    0%   { transform: rotate(90deg); }
+    25%  { transform: rotate(90deg); }
+    50%  { transform: rotate(180deg); }
+    75%  { transform: rotate(270deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
 
 
 
