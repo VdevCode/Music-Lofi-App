@@ -815,22 +815,52 @@ const fontTitleMusic = document.querySelectorAll('.h4 h4')
 const fontAuthor = document.querySelectorAll(".sub__author")
 
 document.querySelector('.changecolor__white').addEventListener('click', function () {
-    changeBackgroundColor.style.backgroundColor = 'white'
-    fontContent.style.color = '#c91635'
 
-    fontHeader.forEach((fontHead) => {
-        fontHead.style.color = 'black'
-    })
-    fontMusic.forEach((editFont) => {
-        editFont.style.color = 'black'
-    })
-    fontTitleMusic.forEach((fontTitle) => {
-        fontTitle.style.color = 'black'
-    })
-    fontAuthor.forEach((subAuthor)=>{
-        subAuthor.style.color = '#4e3c3c'
-    })
+    function changeBgWhite() {
+        changeBackgroundColor.style.backgroundColor = 'white'
+        fontContent.style.color = '#c91635'
+
+        fontHeader.forEach((fontHead) => {
+            fontHead.style.color = 'black'
+        })
+        fontMusic.forEach((editFont) => {
+            editFont.style.color = 'black'
+        })
+        fontTitleMusic.forEach((fontTitle) => {
+            fontTitle.style.color = 'black'
+        })
+        fontAuthor.forEach((subAuthor) => {
+            subAuthor.style.color = '#4e3c3c'
+        })
+    }
+    // changeBgWhite();
+    // if (changeBgWhite) {
+    //     window.localStorage.setItem("bgWhite", changeBackgroundColor.style.backgroundColor = 'white')
+    //     window.localStorage.setItem('clWhite', fontContent.style.color = '#c91635')
+    //     window.localStorage.setItem("fH", fontHead.style.color = 'black')
+    //     window.localStorage.setItem("EF", fontMusic.style.color = 'black')
+    //     window.localStorage.setItem("FT", fontTitleMusic.style.color = 'black')
+    //     window.localStorage.setItem("FA", fontAuthor.style.color = '#4e3c3c')
+    // }
+
 })
+
+
+// function loadBgWhite() {
+//     var changeBackgroundColor = localStorage.getItem("bgWhite")
+//     document.querySelector('.song-side').style.backgroundColor = changeBackgroundColor
+//     var fontContent = localStorage.getItem("clWhite")
+//     document.querySelector(".content h1").style.color = fontContent
+//     var fontHead = localStorage.getItem("fH").style.color = 'black'
+//     document.querySelectorAll('.content p').style.color = fontHead
+//     var fontMusic = localStorage.getItem("EF").style.color = 'black'
+//     document.querySelectorAll('.song__item-menu h1').style.color = fontMusic
+//     var fontTitleMusic = localStorage.getItem("FT").style.color = 'black'
+//     document.querySelectorAll('.h4 h4').style.color = fontTitleMusic
+//     var fontAuthor = localStorage.getItem("FA").style.color = '#4e3c3c'
+//     document.querySelectorAll('.sub__author').style.color = fontAuthor
+// }
+
 document.querySelector('.changecolor__blue').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'rgb(43, 175, 228)'
     fontMusic.forEach((editFont) => {
@@ -839,7 +869,7 @@ document.querySelector('.changecolor__blue').addEventListener('click', function 
     fontHeader.forEach((fontHead) => {
         fontHead.style.color = 'black'
     })
-    fontAuthor.forEach((subAuthor)=>{
+    fontAuthor.forEach((subAuthor) => {
         subAuthor.style.color = '#4e3c3c'
     })
     fontContent.style.color = '#c91635'
@@ -847,7 +877,7 @@ document.querySelector('.changecolor__blue').addEventListener('click', function 
 document.querySelector('.changecolor__red').addEventListener('click', function () {
     changeBackgroundColor.style.backgroundColor = 'rgb(238, 61, 61)'
     fontContent.style.color = 'rgb(42 234 214)'
-    fontAuthor.forEach((subAuthor)=>{
+    fontAuthor.forEach((subAuthor) => {
         subAuthor.style.color = '#e7bfbf'
     })
 })
@@ -870,7 +900,7 @@ document.querySelector('.changecolor-default').addEventListener('click', functio
     fontHeader.forEach((fontHead) => {
         fontHead.style.color = 'white'
     })
-    fontAuthor.forEach((subAuthor)=>{
+    fontAuthor.forEach((subAuthor) => {
         subAuthor.style.color = 'gray'
     })
     fontMusic.forEach((editFont) => {
@@ -879,7 +909,7 @@ document.querySelector('.changecolor-default').addEventListener('click', functio
     fontTitleMusic.forEach((editFont) => {
         editFont.style.color = 'white'
     })
-    
+
 })
 
 //tabs in js
@@ -899,4 +929,33 @@ changeTabs.forEach((tab, index) => {
     })
 })
 
-//check online
+//check time
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "Sáng";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "Tối";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + " " + "giờ" + " : " + m + " " + "phút" + " : " + s + " " + "giây" + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();

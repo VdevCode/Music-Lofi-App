@@ -10,7 +10,8 @@
     <title>Music</title>
 </head>
 
-<body>
+<body onload="//loadBgWhite();"
+>
 
     <!--container-->
     <header>
@@ -23,7 +24,9 @@
 
             <!--text-songs-->
             <div class="playlist">
+                <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
                 <div class="playlist__text font-color">
+
                     <i class='bx bxs-playlist'></i>
                     <h4>Danh sách bài hát</h4>
                 </div>
