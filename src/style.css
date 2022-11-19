@@ -212,6 +212,10 @@ header {
 .wifi__connect .bx-wifi{
     color: greenyellow;
     font-size: 2.5rem;
+
+}
+.wifi__connect{
+    display: none;
 }
 .how-songside-header{
     align-items: center;
@@ -1538,5 +1542,8 @@ header {
     }
     .h4 h4{
         font-size: 1.8rem;
+    }
+    .wifi__connect{
+        display: block;
     }
 }
