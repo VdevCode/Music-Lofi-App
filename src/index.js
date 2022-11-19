@@ -876,9 +876,10 @@ document.querySelector('.changecolor-default').addEventListener('click', functio
     fontMusic.forEach((editFont) => {
         editFont.style.color = 'white'
     })
-    fontMusic.forEach((editFont) => {
+    fontTitleMusic.forEach((editFont) => {
         editFont.style.color = 'white'
     })
+    
 })
 
 //tabs in js
