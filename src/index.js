@@ -757,7 +757,7 @@ let searchResult = document.getElementsByClassName('search_result')[0]
 Songs.forEach(element => {
     const { id, songName, poster } = element
     let cardSearch = document.createElement('a')
-    // cardSearch.href ="#" + id
+    // cardSearch.href = +"/" + "#" + id
     cardSearch.classList.add('cart__search')
     cardSearch.innerHTML = `
     <img src="${poster}" alt="">
@@ -768,10 +768,18 @@ Songs.forEach(element => {
     searchResult.appendChild(cardSearch)
 })
 
-let inputSeach = document.getElementsByClassName('input__seach-result')[0]
+var inputSeach = document.getElementsByClassName('input__seach-result')[0]
+
 inputSeach.addEventListener('keyup', () => {
     let inputSearchValue = inputSeach.value.toUpperCase().trim()
     let itemsSearch = searchResult.getElementsByTagName('a')
+    if (inputSeach.value == 0) {
+        searchResult.style.display = 'none'
+        searchResult.style.zIndex = 0;
+    }
+    else {
+        searchResult.style.display = 'block'
+    }
 
     for (let index = 0; index < itemsSearch.length; index++) {
         let elementItems = itemsSearch[index].getElementsByClassName('content__search')[0]
@@ -782,15 +790,9 @@ inputSeach.addEventListener('keyup', () => {
         else {
             itemsSearch[index].style.display = 'none'
         }
-        if (inputSeach.value == 0) {
-            searchResult.style.display = 'none'
-            searchResult.style.zIndex = 0;
-        }
-        else {
-            searchResult.style.display = 'block'
-        }
     }
 
+    
 })
 //openSetting
 const openSetting = document.querySelector('.open__setting')
@@ -815,7 +817,21 @@ const fontTitleMusic = document.querySelectorAll('.h4 h4')
 const fontAuthor = document.querySelectorAll(".sub__author")
 
 document.querySelector('.changecolor__white').addEventListener('click', function () {
+    changeBackgroundColor.style.backgroundColor = 'white'
+    fontContent.style.color = '#c91635'
 
+    fontHeader.forEach((fontHead) => {
+        fontHead.style.color = 'black'
+    })
+    fontMusic.forEach((editFont) => {
+        editFont.style.color = 'black'
+    })
+    fontTitleMusic.forEach((fontTitle) => {
+        fontTitle.style.color = 'black'
+    })
+    fontAuthor.forEach((subAuthor) => {
+        subAuthor.style.color = '#4e3c3c'
+    })
     function changeBgWhite() {
         changeBackgroundColor.style.backgroundColor = 'white'
         fontContent.style.color = '#c91635'
@@ -935,7 +951,7 @@ function showTime(){
     var h = date.getHours(); // 0 - 23
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
-    var session = "Sáng";
+    var session = "AM";
     
     if(h == 0){
         h = 12;
@@ -943,7 +959,7 @@ function showTime(){
     
     if(h > 12){
         h = h - 12;
-        session = "Tối";
+        session = "PM";
     }
     
     h = (h < 10) ? "0" + h : h;
