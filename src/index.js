@@ -708,17 +708,36 @@ music.addEventListener('ended', () => {
 const shuffle = document.getElementById('shuffle')
 const popupShuffle = document.querySelector('.popup__shuffle')
 
+function addColorShuffle(){
+    shuffle.style.color = "orange"
+}
 
 shuffle.addEventListener('click', poPupShuffle)
 
 function poPupShuffle() {
+    // if (index >= Array.from(Songs).length || index <= Array.from(Songs).length) {
+    // }
+    // if(index = Array.from(Songs).id){
+    //    index+=index
+     
+    // index = 0
+    // index++
+    // index += 0
     popupShuffle.classList.add('active')
     playMusic.classList.add('bx-pause')
     playMusic.classList.remove('bx-play')
     posterPlay.classList.add('active')
     showTextButtons.innerText = 'Đang Play...'
-    music.play()
-}
+    // music.addEventListener("ended", function () {
+    //     index = Array.from(Songs).length
+    //     //    index = Array.from(Songs).length
+    //     index = 0
+    //     index++
+    //     index += 0
+    // })
+    addColorShuffle()
+    // music.play()
+    }
 
 popupShuffle.addEventListener('click', () => {
     popupShuffle.classList.remove('active')
@@ -792,7 +811,7 @@ inputSeach.addEventListener('keyup', () => {
         }
     }
 
-    
+
 })
 //openSetting
 const openSetting = document.querySelector('.open__setting')
@@ -946,32 +965,32 @@ changeTabs.forEach((tab, index) => {
 })
 
 //check time
-function showTime(){
+function showTime() {
     var date = new Date();
     var h = date.getHours(); // 0 - 23
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
     var session = "AM";
-    
-    if(h == 0){
+
+    if (h == 0) {
         h = 12;
     }
-    
-    if(h > 12){
+
+    if (h > 12) {
         h = h - 12;
         session = "PM";
     }
-    
+
     h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
-    
+
     var time = h + " " + "giờ" + " : " + m + " " + "phút" + " : " + s + " " + "giây" + " " + session;
     document.getElementById("MyClockDisplay").innerText = time;
     document.getElementById("MyClockDisplay").textContent = time;
-    
+
     setTimeout(showTime, 1000);
-    
+
 }
 
 showTime();

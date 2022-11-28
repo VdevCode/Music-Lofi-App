@@ -1220,7 +1220,7 @@ header {
     border-radius: 6px;
     margin-right: 6px;
     }
-.change--background--tet::-webkit-scrollbar{
+/* .change--background--tet::-webkit-scrollbar{
     width: 5px;
     height: 3px;
 }
@@ -1235,7 +1235,7 @@ header {
 .change--background--noel::-webkit-scrollbar-thumb{
     background: yellow;
     border-radius: 6px;
-}
+} */
 .change--background--noel img{
     width: 200px;
     height: 100px;
