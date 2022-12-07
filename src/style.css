@@ -599,6 +599,7 @@ header {
     z-index: 10;
     overflow-x: hidden;
     overflow-y: auto;
+    display: none;
 }
 .search_result.active {
     display: block;   
