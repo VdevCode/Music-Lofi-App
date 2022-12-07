@@ -599,9 +599,10 @@ header {
     z-index: 10;
     overflow-x: hidden;
     overflow-y: auto;
-
 }
-
+.search_result.active {
+    display: block;   
+}
 .search_result::-webkit-scrollbar {
     display: none;
 }

@@ -792,6 +792,7 @@ var inputSeach = document.getElementsByClassName('input__seach-result')[0]
 inputSeach.addEventListener('keyup', () => {
     let inputSearchValue = inputSeach.value.toUpperCase().trim()
     let itemsSearch = searchResult.getElementsByTagName('a')
+    searchResult.classList.add('active')
     if (inputSeach.value == 0) {
         searchResult.style.display = 'none'
         searchResult.style.zIndex = 0;
