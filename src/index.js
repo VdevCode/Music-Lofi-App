@@ -995,3 +995,9 @@ function showTime() {
 }
 
 showTime();
+
+// loader
+var loader = document.getElementById('loader-website')
+window.addEventListener('load',function(){
+    loader.style.display = 'none'
+})

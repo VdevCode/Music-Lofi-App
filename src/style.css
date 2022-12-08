@@ -114,15 +114,18 @@ header {
     border-radius: 4px;
 
 }
-.song__item-menu{
+
+.song__item-menu {
     position: relative;
 }
-.description-vip{
+
+.description-vip {
     position: absolute;
     top: 0;
     right: 0px;
 }
-.description-vip i{
+
+.description-vip i {
     color: rgb(250, 57, 23);
     font-size: 2rem;
     background: rgb(238, 234, 9);
@@ -133,21 +136,25 @@ header {
     align-items: center;
     border-top-right-radius: 6px;
 }
-.noel-picture-image{
+
+.noel-picture-image {
     position: absolute;
     top: -30px;
     left: -10px;
 }
-.noel-picture-image img{
+
+.noel-picture-image img {
     width: 50px;
     height: 50px;
-  
+
 }
-.pop__song-music-chill::-webkit-scrollbar{
+
+.pop__song-music-chill::-webkit-scrollbar {
     width: .5rem;
     height: .5rem;
 }
-.pop__song-music-chill::-webkit-scrollbar-thumb{
+
+.pop__song-music-chill::-webkit-scrollbar-thumb {
     background: rgb(232, 52, 193);
     border-radius: 8rem;
 }
@@ -209,15 +216,18 @@ header {
     background: rgb(105, 105, 170, .0);
     text-transform: capitalize;
 }
-.wifi__connect .bx-wifi{
+
+.wifi__connect .bx-wifi {
     color: greenyellow;
     font-size: 2.5rem;
 
 }
-.wifi__connect{
+
+.wifi__connect {
     display: none;
 }
-.how-songside-header{
+
+.how-songside-header {
     align-items: center;
 }
 
@@ -601,9 +611,11 @@ header {
     overflow-y: auto;
     display: none;
 }
+
 .search_result.active {
-    display: block;   
+    display: block;
 }
+
 .search_result::-webkit-scrollbar {
     display: none;
 }
@@ -671,7 +683,8 @@ header {
     cursor: pointer;
     position: relative;
 }
-.image__noel--setting{
+
+.image__noel--setting {
     position: absolute;
     top: -20px;
     right: -8px;
@@ -684,6 +697,7 @@ header {
     display: flex;
     align-items: center;
 }
+
 .content {
     padding: 2rem 7%;
     width: 100%;
@@ -734,8 +748,8 @@ header {
 .buttons a button {
     background: rgba(247, 244, 63, 0.933) !important;
     color: black !important;
-    border: 2px solid #ece250  !important;
-    box-shadow: 0 0 5px #eedc3d, 0 0 5px #e7d63b inset  !important;
+    border: 2px solid #ece250 !important;
+    box-shadow: 0 0 5px #eedc3d, 0 0 5px #e7d63b inset !important;
 }
 
 .popular__song {
@@ -747,14 +761,17 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-.menu__song-list__text-font{
+
+.menu__song-list__text-font {
     color: yellow;
     font-size: 2rem;
     text-align: center;
 }
-.menu__songs-list.font-color{
+
+.menu__songs-list.font-color {
     display: block;
 }
+
 .h4 h4 {
     font-size: 2rem;
     color: white;
@@ -987,7 +1004,7 @@ header {
     width: 170px;
     z-index: 11;
     display: none;
-  
+
 }
 
 .user__setting.active {
@@ -1187,11 +1204,13 @@ header {
 .form__change-color {
     display: inline;
     margin: 2rem 0;
-    
+
 }
-.form__color-text{
+
+.form__color-text {
     overflow-x: hidden;
 }
+
 .form__change-color div {
     margin: 1rem;
     padding: .5rem 1rem;
@@ -1201,27 +1220,31 @@ header {
     display: inline-flex;
     cursor: pointer;
 }
-.change--background--noel{
+
+.change--background--noel {
     width: 90%;
     height: 120px;
     margin-top: 5px;
     display: flex;
     overflow-x: scroll;
-    
+
 }
-.change--background--tet{
+
+.change--background--tet {
     width: 90%;
     height: 120px;
     margin-top: 5px;
     display: flex;
     overflow-x: scroll;
 }
-.change--background--tet img{
+
+.change--background--tet img {
     width: 200px;
     height: 100px;
     border-radius: 6px;
     margin-right: 6px;
-    }
+}
+
 /* .change--background--tet::-webkit-scrollbar{
     width: 5px;
     height: 3px;
@@ -1238,12 +1261,13 @@ header {
     background: yellow;
     border-radius: 6px;
 } */
-.change--background--noel img{
+.change--background--noel img {
     width: 200px;
     height: 100px;
     border-radius: 6px;
     margin-right: 6px;
-    }
+}
+
 .form__change-color div:nth-child(1) {
     background: white;
 }
@@ -1295,19 +1319,22 @@ header {
     font-size: 3rem;
     color: rgb(62, 233, 27);
 }
-.show-songside-header{
+
+.show-songside-header {
     display: none;
 }
 
 .clock {
     color: #44f314;
-    font-size:1.5rem;
-    font-family:sans-serif;
+    font-size: 1.5rem;
+    font-family: sans-serif;
     margin: 1rem 0;
 }
-.loading{
+
+.loading {
     text-align: center;
 }
+
 .loading span {
     display: inline-block;
     vertical-align: middle;
@@ -1317,72 +1344,150 @@ header {
     background: #007DB6;
     border-radius: .6em;
     animation: loading 1s infinite alternate;
-  }
-  
-  /*
+}
+
+/*
    * Dots Colors
    * Smarter targeting vs nth-of-type?
    */
-  .loading span:nth-of-type(2) {
+.loading span:nth-of-type(2) {
     background: #d4c306;
     animation-delay: 0.2s;
-  }
-  .loading span:nth-of-type(3) {
+}
+
+.loading span:nth-of-type(3) {
     background: #d17805;
     animation-delay: 0.4s;
-  }
-  .loading span:nth-of-type(4) {
+}
+
+.loading span:nth-of-type(4) {
     background: #00A77D;
     animation-delay: 0.6s;
-  }
-  .loading span:nth-of-type(5) {
+}
+
+.loading span:nth-of-type(5) {
     background: #00B247;
     animation-delay: 0.8s;
-  }
-  .loading span:nth-of-type(6) {
+}
+
+.loading span:nth-of-type(6) {
     background: #de1414;
     animation-delay: 1.0s;
-  }
-  .loading span:nth-of-type(7) {
+}
+
+.loading span:nth-of-type(7) {
     background: #A0B61E;
     animation-delay: 1.2s;
-  }
-  
-  @keyframes loading {
+}
+
+@keyframes loading {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 
-  
 
-  .loadings {
+
+.loadings {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
-    position: relative; }
-  
-  .loadings svg {
+    position: relative;
+}
+
+.loadings svg {
     width: 100%;
     height: 100%;
-    
-  }
-  
-  .loadings #pulsar{
-    stroke-dasharray:281;
+
+}
+
+.loadings #pulsar {
+    stroke-dasharray: 281;
     -webkit-animation: dash 2.5s infinite linear forwards;
-  }
-  
-  /*Animation*/
-  @-webkit-keyframes dash{ from{stroke-dashoffset:514;} to {stroke-dashoffset:-514;}}
-  
+}
+
+/*Animation*/
+@-webkit-keyframes dash {
+    from {
+        stroke-dashoffset: 514;
+    }
+
+    to {
+        stroke-dashoffset: -514;
+    }
+}
 
 
+#loader-website {
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #000 url(/image/loader.gif) no-repeat center center;
+    z-index: 99;
+    position: fixed;
+    align-items: center;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    margin: -25px 0 0 -25px;
+    transform: translate(0, -50%);
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    animation: rotate 1s infinite cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.loader::before {
+    background-color: #fc3f9e;
+}
+
+.loader::after {
+    background-color: #50e8f3;
+    animation-delay: .5s;
+}
+
+@keyframes rotate {
+
+    0%,
+    100% {
+        left: 45px;
+    }
+
+    25% {
+        transform: scale(.3);
+    }
+
+    50% {
+        left: 0;
+    }
+
+    75% {
+        transform: scale(1);
+    }
+}
 
 
 
@@ -1482,7 +1587,8 @@ header {
     .form__login {
         width: 68%;
     }
-    .show-songside-header{
+
+    .show-songside-header {
         position: fixed;
         top: 0;
         right: 0;
@@ -1491,11 +1597,13 @@ header {
         display: block;
         background: #0b1320;
     }
-    .active-padding-content{
+
+    .active-padding-content {
         margin-top: 7rem;
         display: block;
     }
-    .change--background--noel{
+
+    .change--background--noel {
         width: 400px;
     }
 }
@@ -1595,31 +1703,40 @@ header {
     .setting__color--close {
         font-size: 3rem;
     }
-    .playlist h4{
+
+    .playlist h4 {
         font-size: 1.7rem;
     }
-    .menu-box-text-h1{
+
+    .menu-box-text-h1 {
         font-size: 2.4rem !important;
     }
-    .menu__song-list__text-font{
+
+    .menu__song-list__text-font {
         font-size: 1.7rem;
     }
-    .change--background--noel{
+
+    .change--background--noel {
         width: 300px;
     }
-    .change--background--tet{
+
+    .change--background--tet {
         width: 300px;
     }
-    .form__color-text h1{
+
+    .form__color-text h1 {
         font-size: 1.7rem;
     }
-    .form__setting--color--text h1{
+
+    .form__setting--color--text h1 {
         font-size: 2rem;
     }
-    .h4 h4{
+
+    .h4 h4 {
         font-size: 1.8rem;
     }
-    .wifi__connect{
+
+    .wifi__connect {
         display: block;
     }
 }
