@@ -69,9 +69,10 @@ openMenu.addEventListener('click', function () {
 })
 
 //close menu
-let closeMenu = document.querySelector('.bx-x')
+const closeMenu = document.querySelector('#close-Songs')
 closeMenu.addEventListener('click', function () {
     showMenu.classList.remove('active')
+    console.log("1");
 })
 
 //button song left right
