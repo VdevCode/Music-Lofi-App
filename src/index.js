@@ -421,6 +421,12 @@ const Songs = [
         <div class="sub__author">Lofi hour</div>`,
         poster: './image/52.jpg',
     },
+    {
+        id: 53,
+        songName: `Don't côi<br>
+        <div class="sub__author">RPT Orijinn x Ronboogz</div>`,
+        poster: './image/52.jpg',
+    },
 
 ]
 
