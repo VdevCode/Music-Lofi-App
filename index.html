@@ -18,8 +18,31 @@
     <span class="loader"></span>
 </div>
 
+<div class="popupScreen">
+    <div class="backgroundPopupScreen">
+        <div class="close--Popup">
+            <i class='bx bx-x' ></i>
+        </div>
+        <div class="imagePopupShow">
+            <img src="./image/svgPopup.png" alt="">
+        </div>
+        <div class="text_popup--show">
+            <h1>Thông báo về việc hoạt động của trang web</h1>
+        </div>
+        <div class="ButtonPopupShow">
+           
+                <button>No</button>
+           
+           
+                <button>Yes</button>
+          
+        </div>
+    </div>
+</div>
+
     <!--container-->
     <header>
+
         <!--menu-left-->
         <div class="menu-side">
             <div class="menu-box-text">
@@ -535,6 +558,10 @@
         <!--menu-right-->
         <div class="song-side">
 
+            <canvas id="snow"></canvas>
+
+           
+
             <!--menu top-->
             <nav class="active-songside show-songside-header">
 
@@ -588,6 +615,10 @@
                             <div class="user__setting-music" id="fullscr">
                                 <i class='bx bx-fullscreen'></i>
                                 <h1 class="innerFullScreen">Full Screen</h1>
+                            </div>
+                            <div class="user__setting-music" id="Popup">
+                                <i class='bx bxs-bell'></i>
+                                <h1 class="innerFullScreen">Thông Báo</h1>
                             </div>
                             <div class="user__setting-music open__setting">
                                 <i class='bx bxs-color'></i>
@@ -1465,8 +1496,8 @@
                 <h1>Giao diện Noel</h1>
                 <div class="form__change-color">
                     <section class="change--background--noel">
-                        <img src="./image/noel-background.jpg" alt="">
-                        <img src="./image/background--noel.png" alt="">
+                        <img src="./image/noel-background.jpg" id="backgroundNoel1" alt="">
+                        <img src="./image/background--noel.png" id="backgroundNoel2" alt="">
                     </section>
                    
                 </div>

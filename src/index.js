@@ -708,7 +708,7 @@ music.addEventListener('ended', () => {
 const shuffle = document.getElementById('shuffle')
 const popupShuffle = document.querySelector('.popup__shuffle')
 
-function addColorShuffle(){
+function addColorShuffle() {
     shuffle.style.color = "orange"
 }
 
@@ -719,7 +719,7 @@ function poPupShuffle() {
     // }
     // if(index = Array.from(Songs).id){
     //    index+=index
-     
+
     // index = 0
     // index++
     // index += 0
@@ -737,7 +737,7 @@ function poPupShuffle() {
     // })
     addColorShuffle()
     // music.play()
-    }
+}
 
 popupShuffle.addEventListener('click', () => {
     popupShuffle.classList.remove('active')
@@ -998,6 +998,96 @@ showTime();
 
 // loader
 var loader = document.getElementById('loader-website')
-window.addEventListener('load',function(){
+window.addEventListener('load', function () {
     loader.style.display = 'none'
+})
+
+//snow
+function SnowDelay() {
+
+    var Snow = {
+        el: "#snow",
+        density: 10000, // higher = fewer bits
+        maxHSpeed: 5, // How much do you want them to move horizontally
+        minFallSpeed: 2,
+        canvas: null,
+        ctx: null,
+        particles: [],
+        colors: [],
+        mp: 1,
+        quit: false,
+        init() {
+            this.canvas = document.querySelector(this.el);
+            this.ctx = this.canvas.getContext("2d");
+            this.reset();
+            requestAnimationFrame(this.render.bind(this));
+            window.addEventListener("resize", this.reset.bind(this));
+        },
+        reset() {
+            this.w = window.innerWidth;
+            this.h = window.innerHeight;
+            this.canvas.width = this.w;
+            this.canvas.height = this.h;
+            this.particles = [];
+            this.mp = Math.ceil(this.w * this.h / this.density);
+            for (var i = 0; i < this.mp; i++) {
+                var size = Math.random() * 4 + 5;
+                this.particles.push({
+                    x: Math.random() * this.w, //x-coordinate
+                    y: Math.random() * this.h, //y-coordinate
+                    w: size,
+                    h: size,
+                    vy: this.minFallSpeed + Math.random(), //density
+                    vx: (Math.random() * this.maxHSpeed) - this.maxHSpeed / 2,
+                    fill: "#ffffff",
+                    s: (Math.random() * 0.2) - 0.1
+                });
+            }
+        },
+
+        render() {
+            this.ctx.clearRect(0, 0, this.w, this.h);
+            this.particles.forEach((p, i) => {
+                p.y += p.vy;
+                p.x += p.vx;
+                this.ctx.fillStyle = p.fill;
+                this.ctx.fillRect(p.x, p.y, p.w, p.h);
+                if (p.x > this.w + 5 || p.x < -5 || p.y > this.h) {
+                    p.x = Math.random() * this.w;
+                    p.y = -10;
+                }
+            });
+            if (this.quit) {
+                return;
+            }
+            requestAnimationFrame(this.render.bind(this));
+        },
+        destroy() {
+            this.quit = true;
+        }
+
+    };
+
+    var confetti = Snow.init();
+}
+
+const showNoel1 = document.querySelector("#backgroundNoel1")
+
+showNoel1.addEventListener("click",() => {
+    SnowDelay()
+
+})
+
+const popupScreenShow = document.querySelector('.popupScreen');
+const closePopupHidden = document.querySelector(".close--Popup");
+const ShowHiddenItemPopup = document.querySelector("#Popup");
+
+function openPopupShow(){
+    popupScreenShow.classList.add("active")
+}
+
+ShowHiddenItemPopup.addEventListener("click",openPopupShow)
+
+closePopupHidden.addEventListener("click",function(){
+    popupScreenShow.classList.remove("active")
 })

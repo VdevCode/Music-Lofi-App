@@ -1489,6 +1489,110 @@ header {
     }
 }
 
+#snow{
+    position: absolute;
+}
+.change--background--noel img{
+    cursor: pointer;
+}
+.change--background--noel img:hover  {
+    opacity: .5;
+} 
+
+
+.hidden {
+    display: none;
+}
+
+.popupScreen{
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    width: 100%;
+    display:none;
+}
+.popupScreen.active{
+    display: block;
+}
+.backgroundPopupScreen{
+    padding: 2rem 0;
+    width: 400px;
+    height: 80%;
+    background: rgb(233, 231, 231);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    border-radius: 7px;
+    box-shadow: 0 0.4px 3.6px rgba(0, 0, 0, 0.004),
+    0 1px 8.5px rgba(0, 0, 0, 0.01), 0 1.9px 15.7px rgba(0, 0, 0, 0.019),
+    0 3.4px 28.2px rgba(0, 0, 0, 0.03), 0 6.3px 54.4px rgba(0, 0, 0, 0.047),
+    0 15px 137px rgba(0, 0, 0, 0.07);
+}
+.backgroundPopupScreen h1{
+    font-size: 2.2rem;
+    position: absolute;
+    margin-top: 2rem;
+    text-align: center;
+}
+.close--Popup{
+    cursor: pointer;
+}
+.close--Popup i{
+    background-color: red;
+    top: 0;
+    color: white;
+    right: 0;
+    font-size: 3rem;
+    position: absolute;
+    padding: 2rem;
+    border-top-right-radius: 7px;
+}
+.imagePopupShow{
+    text-align: center;
+}
+.imagePopupShow img{
+    width: 300px;
+    height: 300px;
+    margin-top: 7rem;
+}
+.ButtonPopupShow{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+
+}
+.text_popup--show{
+    text-align: center;
+}
+.ButtonPopupShow button{
+    padding: 2rem 6rem;
+    margin: 0 1rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.ButtonPopupShow button:nth-child(1){
+    background-color: black;
+    color: var(--white-color);
+}
+.ButtonPopupShow button:nth-child(2){
+    background-color: rgb(77, 193, 19);
+    color: rgb(237, 238, 230);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1650,7 +1754,9 @@ header {
     .master_play #currentStart {
         margin-left: 2.5rem;
     }
-
+    .backgroundPopupScreen{
+        width: 80%;
+    }
     .bar {
         width: 100%;
     }
