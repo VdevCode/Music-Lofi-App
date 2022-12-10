@@ -1639,7 +1639,7 @@ header {
 .ButtonPopupShow button:nth-child(1) {
     background:rgb(238, 93, 209);
     color: rgb(249, 247, 247);
-    border: 2px solid rgb(236, 184, 225);
+    border: 2px solid rgb(232, 200, 225);
 }
 
 .ButtonPopupShow button:nth-child(2) {
@@ -2072,10 +2072,11 @@ header {
     }
 
     .wrapper .toast {
-        background: #fff;
-
+        padding: 0 .5rem;
+        background: white;
+        border: 2px solid rgb(220, 16, 162);
         border-radius: 10px;
-        border-left: 5px solid #2ecc71;
+        /* border-left: 5px solid #16c403; */
         box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
         width: 100%;
         display: flex;
@@ -2095,12 +2096,12 @@ header {
     }
 
     .content-toast .icon {
-        font-size: 2rem;
+        font-size: 3rem;
         color: #fff;
         height: 5rem;
         width: 5rem;
         text-align: center;
-        line-height: 5rem;
+        line-height: 5.5rem;
         border-radius: 50%;
         background: #2ecc71;
     }
