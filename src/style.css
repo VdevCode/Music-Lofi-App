@@ -704,7 +704,6 @@ header {
 }
 
 .content h1 {
-    font-size: 2rem;
     color: greenyellow;
     font-weight: 600;
 }
@@ -722,13 +721,14 @@ header {
 }
 
 .buttons button {
-
+    background: none;
     width: 130px;
     height: 30px;
     border-radius: 4px;
-    color: white;
+    color: white !important;
     cursor: pointer;
     margin-right: 1rem;
+    font-size:1.4rem;
 }
 
 .buttons button:nth-child(1):hover,
@@ -740,14 +740,46 @@ header {
 
 
 .buttons button:nth-child(1) {
-    background: #5ade;
+    /* background: #5ade; */
     border: 2px solid #36e2ec;
     box-shadow: 0 0 5px #1cdbe9, 0 0 5px #1da4da inset;
+    position: relative;
+}
+.buttons button:nth-child(1)::before{
+    content: '';
+    width: 3px;
+    height: 60%;
+    position: absolute;
+    left: 0;
+    background: #36e2ec;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.buttons button:nth-child(2)::before{
+    content: '';
+    width: 3px;
+    height: 60%;
+    position: absolute;
+    right: 0;
+    background: #ece250 !important;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.buttons button:nth-child(2) {
+    /* background: #5ade; */
+    border: 2px solid #ece250;
+    box-shadow: 0 0 5px #eedc3d, 0 0 5px #e7d63b inset !important;
+    position: relative;
+    color: white;
+}
+.buttons button:nth-child(2) i{
+    
 }
 
 .buttons a button {
-    background: rgba(247, 244, 63, 0.933) !important;
-    color: black !important;
+    /* background: rgba(247, 244, 63, 0.933) !important; */
     border: 2px solid #ece250 !important;
     box-shadow: 0 0 5px #eedc3d, 0 0 5px #e7d63b inset !important;
 }

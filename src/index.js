@@ -1106,6 +1106,8 @@ const popupScreenShow = document.querySelector('.popupScreen');
 const closePopupHidden = document.querySelector(".close--Popup");
 const ShowHiddenItemPopup = document.querySelector("#Popup");
 const hiddenNumberAlert = document.querySelector(".notify-alert")
+const closeAlertButton = document.querySelector(".Button--close-alert")
+const allowAlertButton = document.querySelector(".Button--allow-alert")
 
 function openPopupShow(){
     popupScreenShow.classList.add("active")
@@ -1115,11 +1117,22 @@ function openPopupShow(){
 
 ShowHiddenItemPopup.addEventListener("click",openPopupShow)
 
-closePopupHidden.addEventListener("click",function(){
+function removePopupScreenShow(){
     popupScreenShow.classList.remove("active")
+}
+
+closePopupHidden.addEventListener("click",function(){
+    removePopupScreenShow()
 })
 
+closeAlertButton.addEventListener("click",function(){
+    removePopupScreenShow()
+})
 
+allowAlertButton.addEventListener("click",function(){
+    alert("bạn sẽ nhận được thông báo khi web cập nhật chức năng !!! ")
+    removePopupScreenShow()
+})
 //online or ofline
 
 // Selecting all required elements
