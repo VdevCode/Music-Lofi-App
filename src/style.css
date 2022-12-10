@@ -1571,12 +1571,13 @@ header {
     padding: 2rem 0;
     width: 400px;
     height: 80%;
-    background: rgb(233, 231, 231);
+    border: 2px solid rgb(52, 212, 244);
+    background: rgb(47, 46, 46);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: relative;
-    border-radius: 7px;
+    border-radius: 9px;
     box-shadow: 0 0.4px 3.6px rgba(0, 0, 0, 0.004),
         0 1px 8.5px rgba(0, 0, 0, 0.01), 0 1.9px 15.7px rgba(0, 0, 0, 0.019),
         0 3.4px 28.2px rgba(0, 0, 0, 0.03), 0 6.3px 54.4px rgba(0, 0, 0, 0.047),
@@ -1588,6 +1589,7 @@ header {
     position: absolute;
     margin-top: 2rem;
     text-align: center;
+    color: rgb(143, 246, 237);
 }
 
 .close--Popup {
@@ -1626,10 +1628,8 @@ header {
     text-align: center;
 }
 
-.ButtonPopupShow {}
-
 .ButtonPopupShow button {
-    padding: 2rem 6rem;
+    padding: 1rem 6rem;
     margin: 1rem 1rem 1rem 1rem;
     border-radius: 6px;
     text-transform: uppercase;
@@ -1637,13 +1637,15 @@ header {
 }
 
 .ButtonPopupShow button:nth-child(1) {
-    background-color: black;
-    color: var(--white-color);
+    background:rgb(238, 93, 209);
+    color: rgb(249, 247, 247);
+    border: 2px solid rgb(236, 184, 225);
 }
 
 .ButtonPopupShow button:nth-child(2) {
     background-color: rgb(77, 193, 19);
     color: rgb(237, 238, 230);
+    border: 2px solid rgb(128, 243, 96);
 }
 
 .user__setting-music .bxs-bell {
