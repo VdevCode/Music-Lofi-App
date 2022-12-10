@@ -1245,22 +1245,26 @@ header {
     margin-right: 6px;
 }
 
-.change--background--tet::-webkit-scrollbar{
+.change--background--tet::-webkit-scrollbar {
     width: 5px;
     height: 3px;
 }
-.change--background--tet::-webkit-scrollbar-thumb{
+
+.change--background--tet::-webkit-scrollbar-thumb {
     background: rgb(77, 255, 0);
     border-radius: 6px;
 }
-.change--background--noel::-webkit-scrollbar{
+
+.change--background--noel::-webkit-scrollbar {
     width: 5px;
     height: 3px;
 }
-.change--background--noel::-webkit-scrollbar-thumb{
+
+.change--background--noel::-webkit-scrollbar-thumb {
     background: yellow;
     border-radius: 6px;
 }
+
 .change--background--noel img {
     width: 200px;
     height: 100px;
@@ -1489,39 +1493,46 @@ header {
     }
 }
 
-#snow{
+#snow {
     position: absolute;
 }
-.change--background--noel img{
+
+.change--background--noel img {
     cursor: pointer;
 }
-.change--background--noel img:hover  {
+
+.change--background--noel img:hover {
     opacity: .5;
-} 
+}
 
 
 .hidden {
     display: none;
 }
 
-.popupScreen{
+.popupScreen {
     position: fixed;
-    top: 0;left: 0;right: 0;bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 100;
     width: 100%;
     height: 100%;
-    display:none;
+    display: none;
     opacity: 0;
     margin-top: -200%;
 }
-.popupScreen.active{
+
+.popupScreen.active {
     transition: .5s;
     opacity: 1;
     margin-top: 0%;
     display: block;
 }
-.backgroundPopupScreen{
+
+.backgroundPopupScreen {
     padding: 2rem 0;
     width: 400px;
     height: 80%;
@@ -1532,20 +1543,23 @@ header {
     position: relative;
     border-radius: 7px;
     box-shadow: 0 0.4px 3.6px rgba(0, 0, 0, 0.004),
-    0 1px 8.5px rgba(0, 0, 0, 0.01), 0 1.9px 15.7px rgba(0, 0, 0, 0.019),
-    0 3.4px 28.2px rgba(0, 0, 0, 0.03), 0 6.3px 54.4px rgba(0, 0, 0, 0.047),
-    0 15px 137px rgba(0, 0, 0, 0.07);
+        0 1px 8.5px rgba(0, 0, 0, 0.01), 0 1.9px 15.7px rgba(0, 0, 0, 0.019),
+        0 3.4px 28.2px rgba(0, 0, 0, 0.03), 0 6.3px 54.4px rgba(0, 0, 0, 0.047),
+        0 15px 137px rgba(0, 0, 0, 0.07);
 }
-.backgroundPopupScreen h1{
+
+.backgroundPopupScreen h1 {
     font-size: 2.2rem;
     position: absolute;
     margin-top: 2rem;
     text-align: center;
 }
-.close--Popup{
+
+.close--Popup {
     cursor: pointer;
 }
-.close--Popup i{
+
+.close--Popup i {
     background-color: red;
     top: 0;
     color: white;
@@ -1555,102 +1569,123 @@ header {
     padding: 2rem;
     border-top-right-radius: 7px;
 }
-.imagePopupShow{
+
+.imagePopupShow {
     text-align: center;
 }
-.imagePopupShow img{
+
+.imagePopupShow img {
     width: 80%;
     height: 80%;
     margin-top: 7rem;
 }
-.ButtonPopupShow{
+
+.ButtonPopupShow {
     margin-top: 10rem;
     display: flex;
     justify-content: center;
 
 }
-.text_popup--show{
+
+.text_popup--show {
     text-align: center;
 }
-.ButtonPopupShow{
-    
-}
-.ButtonPopupShow button{
+
+.ButtonPopupShow {}
+
+.ButtonPopupShow button {
     padding: 2rem 6rem;
     margin: 1rem 1rem 1rem 1rem;
     border-radius: 6px;
     text-transform: uppercase;
     cursor: pointer;
 }
-.ButtonPopupShow button:nth-child(1){
+
+.ButtonPopupShow button:nth-child(1) {
     background-color: black;
     color: var(--white-color);
 }
-.ButtonPopupShow button:nth-child(2){
+
+.ButtonPopupShow button:nth-child(2) {
     background-color: rgb(77, 193, 19);
     color: rgb(237, 238, 230);
 }
-.user__setting-music .bxs-bell{
+
+.user__setting-music .bxs-bell {
     color: rgb(234, 206, 26);
 }
 
 
-.wrapper{
+.wrapper {
     position: fixed;
     top: 10%;
     right: 5%;
     z-index: 20;
     animation: show_toast 1s ease forwards;
-  }
-  @keyframes show_toast {
-    0%{
-      transform: translateX(-100%);
+}
+
+@keyframes show_toast {
+    0% {
+        transform: translateX(-100%);
     }
-    40%{
-      transform: translateX(10%);
+
+    40% {
+        transform: translateX(10%);
     }
-    80%, 100%{
-      transform: translateX(20px);
+
+    80%,
+    100% {
+        transform: translateX(20px);
     }
-  }
-  .wrapper.hide{
+}
+
+.wrapper.hide {
     animation: hide_toast 1s ease forwards;
-  }
-  @keyframes hide_toast {
-    0%{
-      transform: translateX(20px);
+}
+
+@keyframes hide_toast {
+    0% {
+        transform: translateX(20px);
     }
-    40%{
-      transform: translateX(10%);
+
+    40% {
+        transform: translateX(10%);
     }
-    80%, 100%{
-      opacity: 0;
-      pointer-events: none;
-      transform: translateX(-100%);
+
+    80%,
+    100% {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-100%);
     }
-  }
-  .wrapper .toast{
+}
+
+.wrapper .toast {
     background: #fff;
     padding: 1rem 2rem;
     border-radius: 10px;
     border-left: 5px solid #2ecc71;
-    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+    box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
     width: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .wrapper .toast.offline{
+}
+
+.wrapper .toast.offline {
     border-color: #ccc;
-  }
-  .toast{
+}
+
+.toast {
     padding: 0 1rem;
-  }
-  .toast .content-toast{
+}
+
+.toast .content-toast {
     display: flex;
     align-items: center;
-  }
-  .content-toast .icon{
+}
+
+.content-toast .icon {
     font-size: 25px;
     color: #fff;
     height: 50px;
@@ -1659,21 +1694,26 @@ header {
     line-height: 50px;
     border-radius: 50%;
     background: #2ecc71;
-  }
-  .toast.offline .content-toast .icon{
+}
+
+.toast.offline .content-toast .icon {
     background: #ccc;
-  }
-  .content-toast .details{
+}
+
+.content-toast .details {
     margin-left: 15px;
-  }
-  .details span{
+}
+
+.details span {
     font-size: 20px;
     font-weight: 500;
-  }
-  .details p{
+}
+
+.details p {
     color: #878787;
-  }
-  .toast .close-icon{
+}
+
+.toast .close-icon {
     color: #e31212;
     font-size: 23px;
     cursor: pointer;
@@ -1684,10 +1724,43 @@ header {
     border-radius: 50%;
     background: #f2f2f2;
     transition: all 0.3s ease;
-  }
-  .close-icon:hover{
+}
+
+.close-icon:hover {
     background: #efefef;
-  }
+}
+
+.notify-alert {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-size: 1.2rem;
+    color: rgb(236, 234, 234);
+    padding: .3rem;
+    background-color: rgb(227, 28, 28);
+    border-radius: 50%;
+}
+.notify-alert.active{
+    display: none;
+}
+.bxs-bell{
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1859,9 +1932,11 @@ header {
     .master_play #currentStart {
         margin-left: 2.5rem;
     }
-    .backgroundPopupScreen{
+
+    .backgroundPopupScreen {
         width: 80%;
     }
+
     .bar {
         width: 100%;
     }
@@ -1950,34 +2025,39 @@ header {
     .wifi__connect {
         display: block;
     }
-    .wrapper{
+
+    .wrapper {
         position: fixed;
         top: 10%;
         right: 7%;
         z-index: 20;
         animation: show_toast 1s ease forwards;
-      }
-      .wrapper .toast{
+    }
+
+    .wrapper .toast {
         background: #fff;
 
         border-radius: 10px;
         border-left: 5px solid #2ecc71;
-        box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+        box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-align: center;
-      }
-      .wrapper .toast.offline{
+    }
+
+    .wrapper .toast.offline {
         border-color: #ccc;
-      }
-      .toast .content-toast{
+    }
+
+    .toast .content-toast {
         display: flex;
         align-items: center;
         padding: 1rem;
-      }
-      .content-toast .icon{
+    }
+
+    .content-toast .icon {
         font-size: 2rem;
         color: #fff;
         height: 5rem;
@@ -1986,19 +2066,23 @@ header {
         line-height: 5rem;
         border-radius: 50%;
         background: #2ecc71;
-      }
-      .content-toast .details{
+    }
+
+    .content-toast .details {
         margin-left: 15px;
-      }
-      .details span{
-        font-size:2rem;
+    }
+
+    .details span {
+        font-size: 2rem;
         font-weight: 500;
-      }
-      .details p{
+    }
+
+    .details p {
         color: #878787;
         font-size: 1.4rem;
-      }
-      .toast .close-icon{
+    }
+
+    .toast .close-icon {
         color: #e31212;
         font-size: 23px;
         cursor: pointer;
@@ -2009,8 +2093,8 @@ header {
         border-radius: 50%;
         background: #f2f2f2;
         transition: all 0.3s ease;
-      }
-    
+    }
+
 }
 
 @media (max-width:320px) {

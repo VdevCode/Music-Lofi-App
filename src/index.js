@@ -1105,10 +1105,12 @@ showNoel2.addEventListener("click",() => {
 const popupScreenShow = document.querySelector('.popupScreen');
 const closePopupHidden = document.querySelector(".close--Popup");
 const ShowHiddenItemPopup = document.querySelector("#Popup");
+const hiddenNumberAlert = document.querySelector(".notify-alert")
 
 function openPopupShow(){
     popupScreenShow.classList.add("active")
     ShowHiddenItemPopup.style.transition = ".5s";
+    hiddenNumberAlert.classList.add('active')
 }
 
 ShowHiddenItemPopup.addEventListener("click",openPopupShow)
