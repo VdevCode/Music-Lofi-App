@@ -240,6 +240,7 @@ header {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: 1px solid rgb(73, 73, 73);
 }
 
 .song__item span {
@@ -632,6 +633,7 @@ header {
     background: rgba(0, 0, 0, 0.7);
     margin-bottom: 7px;
     display: none;
+    border: 1px solid rgb(9, 255, 0);
 }
 
 .cart__search img {
@@ -1280,6 +1282,7 @@ header {
     height: 100px;
     border-radius: 6px;
     margin-right: 6px;
+    border: 1px solid rgb(118, 226, 85);
 }
 
 .change--background--tet::-webkit-scrollbar {
@@ -1307,35 +1310,43 @@ header {
     height: 100px;
     border-radius: 6px;
     margin-right: 6px;
+    border: 1px solid rgb(203, 236, 37);
 }
 
 .form__change-color div:nth-child(1) {
     background: white;
+    border: 2px solid rgb(237, 238, 236);
 }
 
 .form__change-color div:nth-child(2) {
     background: rgb(43, 175, 228);
+    border: 2px solid rgb(11, 239, 224);
 }
 
 .form__change-color div:nth-child(3) {
     background: rgb(238, 61, 61);
+    border: 2px solid rgb(249, 128, 128);
 }
 
 .form__change-color div:nth-child(4) {
     background: rgb(67, 170, 72);
+    border: 2px solid rgb(143, 244, 42);
 }
 
 .form__change-color div:nth-child(5) {
     background: rgb(248, 61, 148);
+    border: 2px solid rgb(242, 131, 220);
 }
 
 .form__change-color div:nth-child(6) {
     background: rgb(221, 192, 26);
+    border: 2px solid rgb(230, 218, 95);
 }
 
 .form__change-color div:nth-child(7) {
     background: #0b1320;
     position: relative;
+    border: 2px solid rgb(66, 66, 66);
 }
 
 .changecolor-default::before {
