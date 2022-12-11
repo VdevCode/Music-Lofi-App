@@ -55,6 +55,7 @@ header {
     height: 90%;
     background: #111727;
     box-shadow: 5px 0px 2px #090f1f;
+
 }
 
 .song-side {
@@ -1098,8 +1099,8 @@ header {
     color: yellow;
 }
 
-.bxs-color {
-    color: #e9971c;
+.bxs-palette {
+    color: #e85b5b;
 }
 
 .form__login {
@@ -1224,7 +1225,7 @@ header {
     width: 90%;
     height: 100%;
     margin: auto;
-    padding: 2rem 7%;
+    padding: 2rem 4%;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -1570,7 +1571,6 @@ header {
     height: 100%;
     display: none;
     opacity: 0;
-    margin-top: -200%;
 }
 
 .popupScreen.active {
@@ -1594,7 +1594,19 @@ header {
         0 1px 8.5px rgba(0, 0, 0, 0.01), 0 1.9px 15.7px rgba(0, 0, 0, 0.019),
         0 3.4px 28.2px rgba(0, 0, 0, 0.03), 0 6.3px 54.4px rgba(0, 0, 0, 0.047),
         0 15px 137px rgba(0, 0, 0, 0.07);
+    animation: showPopup .3s ease-in-out;
 }
+
+@keyframes showPopup{
+    0%{
+        margin-top: -50%;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+
 .text_popup--show{
     text-align: center;
 }
@@ -1864,6 +1876,16 @@ header {
         position: absolute;
         z-index: 10;
         width: 50%;
+        animation: showMenuSide .3s ease-in-out;
+    }
+
+    @keyframes showMenuSide {
+        0%{
+            margin-left: -100%;
+        }
+        100%{
+            margin-left: 0;
+        }
     }
 
     .menu-side.active {
