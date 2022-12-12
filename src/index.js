@@ -737,20 +737,23 @@ function poPupShuffle() {
     // index = 0
     // index++
     // index += 0
+    // music.play()
+    
+    // if(index++){
+    //     index = index.id
+    // }
+
+    // music.src = `./audio/${index}.mp3`
+    // posterPlay.src = `./image/${index}.jpg`
+    // titleSong.innerHTML = Songs[i].songName
+    downloadMusic.href = `audio/${index}.mp3`
     popupShuffle.classList.add('active')
     playMusic.classList.add('bx-pause')
     playMusic.classList.remove('bx-play')
     posterPlay.classList.add('active')
     showTextButtons.innerText = 'Đang Play...'
-    // music.addEventListener("ended", function () {
-    //     index = Array.from(Songs).length
-    //     //    index = Array.from(Songs).length
-    //     index = 0
-    //     index++
-    //     index += 0
-    // })
     addColorShuffle()
-    // music.play()
+   
 }
 
 popupShuffle.addEventListener('click', () => {

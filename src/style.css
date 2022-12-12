@@ -63,6 +63,7 @@ header {
     height: 90%;
     overflow-y: auto;
     background: #0b1320;
+    overflow-x:hidden ;
 }
 
 .master_play {
@@ -1599,7 +1600,7 @@ header {
 
 @keyframes showPopup{
     0%{
-        margin-top: -50%;
+        margin-top: -30%;
     }
     100%{
         margin-top: 0;
