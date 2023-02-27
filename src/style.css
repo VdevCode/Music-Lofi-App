@@ -120,6 +120,9 @@ header {
 .song__item-menu {
     position: relative;
 }
+.song__item-menu h1{
+    text-transform: capitalize;
+}
 
 .description-vip {
     position: absolute;
@@ -1964,7 +1967,9 @@ header {
     }
 }
 
+@media (max-width:320px) {
 
+}
 
 
 @media (max-width:480px) {

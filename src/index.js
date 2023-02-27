@@ -111,20 +111,20 @@ const Songs = [
     },
     {
         id: 02,
-        songName: `Cuối cùng thì<br>
-        <div class="sub__author">J97</div>`,
+        songName: `Vô tư<br>
+        <div class="sub__author">quyền hải phòng</div>`,
         poster: './image/bai2.jpg',
     },
     {
         id: 03,
-        songName: `Slowly<br>
-        <div class="sub__author">Henzy</div>`,
+        songName: `sang xịn mịn ft buông hàng <br>
+        <div class="sub__author">gill x kewtiie</div>`,
         poster: './image/3.jpg',
     },
     {
         id: 04,
-        songName: `Fearless<br>
-        <div class="sub__author">Lost Sky</div>`,
+        songName: ` Sài Gòn Yếu Đuối Biết Dựa Vào Ai?<br>
+        <div class="sub__author">Tăng Phúc ft. Charles Huỳnh</div>`,
         poster: './image/4.jpg',
     },
     {
